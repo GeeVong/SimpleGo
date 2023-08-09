@@ -18,9 +18,9 @@ if [ $? -ne 0 ]; then
 fi
 
 # 创建文件并添加内容
-echo 'package main.go
+echo 'package main.go.go
 
-func main.go() {
+func main.go.go() {
 
 }' > "$directory_name/$file_name"
 if [ $? -ne 0 ]; then

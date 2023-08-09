@@ -1,4 +1,4 @@
-//package main.go
+//package main.go.go
 //
 //import (
 //	"fmt"
@@ -20,7 +20,7 @@
 //	}
 //}
 //
-//func main.go() {
+//func main.go.go() {
 //	numWorkers := 5
 //	numTasks := 10
 //

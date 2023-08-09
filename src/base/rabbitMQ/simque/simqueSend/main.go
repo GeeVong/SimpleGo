@@ -1,12 +1,19 @@
 package main
 
 import (
+	"fmt"
 	amqp "github.com/streadway/amqp"
 	"log"
+	"strconv"
+
+	"time"
 )
 
 func main() {
+	generateMessage()
+}
 
+func generateMessage() {
 	// 连接RabbitMQ
 	conn, err := amqp.Dial("amqp://guest:guest@localhost:5672/")
 	if nil != err {
@@ -29,11 +36,19 @@ func main() {
 	)
 	failOnError(err, "Failed to declare a queue")
 
-	// 要发送的消息内容
-	body := "Hello rabbitMQ!"
-
 	// 发送消息
-	err = ch.Publish(
+	//singleMessage(ch, q, 2)
+
+	for i := 10; i > 0; i-- {
+		time.Sleep(time.Second)
+		singleMessage(ch, q, i)
+	}
+
+}
+
+func singleMessage(ch *amqp.Channel, q amqp.Queue, i int) {
+	body := "Hello rabbitMQ!" + " " + strconv.FormatInt(time.Now().Unix(), 10) + " == " + strconv.Itoa(i)
+	err := ch.Publish(
 		"",     // exchange
 		q.Name, // routing key
 		false,  // mandatory
@@ -42,8 +57,10 @@ func main() {
 			ContentType: "text/plain",
 			Body:        []byte(body),
 		})
+
 	failOnError(err, "Failed to publish a message")
 	log.Printf(" [x] Sent %s", body)
+	fmt.Println("=======i:", i)
 }
 
 func failOnError(err error, msg string) {
