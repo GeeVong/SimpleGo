@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47fd955d-cfd1-41ac-85fa-84f9d7c84376" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/base/rabbitMQ/subscribe/publish/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/base/rabbitMQ/subscribe/subscribe/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/channel/create.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/channel/create.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/channel/using.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/channel/using.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/create.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/create.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/locks/create.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/locks/create.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/rabbitMQ/simque/simqueSend/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/rabbitMQ/simque/simqueSend/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/rabbitMQ/subscribe/main" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/rabbitMQ/work/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/rabbitMQ/work/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/xxl/1.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/xxl/1.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commit.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/t-slice/tslice.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/t-slice/tslice.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +84,7 @@
       <recent name="$PROJECT_DIR$/src/base/channel/buffering" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build main.go">
+  <component name="RunManager" selected="Go Build.go build tslice.go">
     <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="golangReview" />
       <working_directory value="$PROJECT_DIR$" />
@@ -99,20 +93,20 @@
       <filePath value="$PROJECT_DIR$/src/base/rabbitMQ/work/main.go" />
       <method v="2" />
     </configuration>
-    <configuration name="go build mapt.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="golangReview" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/src/base/mapt/mapt.go" />
-      <method v="2" />
-    </configuration>
     <configuration name="go build tpprof.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="golangReview" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$/src/base/pprof/tpprof.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build tslice.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="golangReview" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/src/base/t-slice/tslice.go" />
       <method v="2" />
     </configuration>
     <configuration name="rcv" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
@@ -148,19 +142,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Go Build.go build tslice.go" />
       <item itemvalue="Go Build.go build main.go" />
       <item itemvalue="Go Build.simqueRcv" />
       <item itemvalue="Go Build.rcv" />
-      <item itemvalue="Go Build.go build mapt.go" />
       <item itemvalue="Go Build.go build tpprof.go" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build tslice.go" />
         <item itemvalue="Go Build.go build main.go" />
         <item itemvalue="Go Build.simqueRcv" />
         <item itemvalue="Go Build.rcv" />
         <item itemvalue="Go Build.simqueRcv" />
-        <item itemvalue="Go Build.go build tpprof.go" />
       </list>
     </recent_temporary>
   </component>
@@ -216,21 +210,6 @@
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/src/base/t-slice/tslice.go</url>
-          <line>29</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/src/base/t-slice/tslice.go</url>
-          <line>51</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/src/base/t-slice/tslice.go</url>
-          <line>22</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/src/base/pprof/tpprof.go</url>
           <line>25</line>
           <option name="timeStamp" value="37" />
@@ -253,8 +232,8 @@
         <watch expression="arr[j]" />
         <watch expression="pivot" />
       </configuration>
-      <inline-watch fileUrl="file://$PROJECT_DIR$/src/base/t-slice/tslice.go" line="25">
-        <watch expression="&amp;aaa" language="go" />
+      <inline-watch fileUrl="file://$PROJECT_DIR$/src/base/t-slice/tslice.go" line="103">
+        <watch expression="&amp;str" language="go" />
       </inline-watch>
     </watches-manager>
   </component>

@@ -2,55 +2,34 @@ package main
 
 import (
 	"fmt"
-	"unsafe"
+	"sort"
+	"strconv"
 )
 
-var a [10]int32
-var addresses []uintptr
+/*
+	1. 验证slice作为函数参数传递
+	2. 验证 int（stack） make slice（heap） global param 在内存中的分布情况
 
-func init() {
-	addresses = make([]uintptr, 0, 10)
+*/
+
+var a [10]int32 // 全局数据
+var addresses []addressInfo
+
+type addressInfo struct {
+	name          string
+	address       string
+	address10Data int64
 }
 
-func main() {
-	// 切片作为参数
-	sparam := make([]int32, 0, 10)
-	sparam = append(sparam, 1)
-	sparam = append(sparam, 2)
-
-	sparam = sliceParam(sparam)
-	fmt.Println("====")
-	println("sparam addrres\n:", &sparam[0])
-	showSliceParam(sparam)
-
-	//aaa := 0xc0000b8018
-	//fmt.Println(aaa)
-
-	// 测试 slice int global 变量在内存地址的位置
-	tSlice()
-	a[0] = 10
-	fmt.Printf("globel array's addres:%v\n", &a[0])
-	unsafePtr := unsafe.Pointer(&a[0])
-	addressCollect(uintptr(unsafePtr))
-	fmt.Println("============")
-	compareAddress()
-
-	fmt.Println(addresses)
-	for {
-		select {
-		default:
-
-		}
-	}
-
+func init() {
+	addresses = make([]addressInfo, 0, 10) // 地址比较排序，用于查看不同类型变量，内存高低
 }
 
 func sliceParam(s []int32) []int32 {
 	s[0] = 1111
 	s = append(s, 100)
 
-	println("s addrres\n:", s)
-	showSliceParam(s)
+	fmt.Printf("s info: %v\n", s)
 	return s
 }
 
@@ -60,76 +39,91 @@ func showSliceParam(s []int32) {
 	}
 }
 
-/*
-	heap：anewint64's addres:0xc0000b8018
-	stack：str's addres:0xc00008c220
-	globel：globel array's addres:0x117a140
+func getGlobalIntAddress() {
+	a[0] = 10
+	fmt.Printf("globel array's addres:%v\n", &a[0])
 
+	addressCollect("global int", &a[0])
+}
 
-	heap：824634474520
-	stack：824634294816
-	globel：18325824
-
-*/
-
-func tSlice() {
-	//s := make([]int32, 10, 111)
-	//s[0] = 1
-	//s[1] = 1
-	//s[2] = 1
-	//fmt.Printf("slice's addres:%v\n", &s[0])
-	//
-	//unsafePtr := unsafe.Pointer(&s[0])
-	//addressCollect(uintptr(unsafePtr))
-
+func getHeapInt64Address() {
 	anewint64 := new(int64)
 	var tanewint64 int64 = 100
 	anewint64 = &tanewint64
 	fmt.Printf("anewint64's addres:%v\n", &anewint64)
-	addressCollect(uintptr(unsafe.Pointer(anewint64)))
+	addressCollect("new(int64)", &anewint64)
+}
 
+func convertAddress(addresses []addressInfo) {
+	for i := 0; i < len(addresses); i++ {
+		addresses[i].address10Data = _16to10(addresses[i].name, addresses[i].address)
+	}
+}
+
+func _16to10(name, hexString string) int64 {
+	decimal, err := strconv.ParseInt(hexString, 0, 64)
+	if err != nil {
+		fmt.Println("转换出错:", err)
+		return -1
+	}
+	fmt.Printf(name)
+	fmt.Printf("相关数据,十六进制: %v, 十进制：%d\n", hexString, decimal)
+	return decimal
+}
+
+func main() {
+	// 切片作为参数
+	sparam := make([]int32, 0, 10)
+	sparam = append(sparam, 1)
+	sparam = append(sparam, 2)
+
+	// 切片作为参数
+	sparam = sliceParam(sparam)
+	println("sparam addrres:", &sparam[0])
+
+	// 测试 slice int global 变量在内存地址的位置
+	fmt.Println("=========== compareAddress =============")
+	getLocalStrAddress()
+	getGlobalIntAddress()
+	getHeapInt64Address()
+
+	convertAddress(addresses)
+
+	compareAddress()
+
+	for {
+		select {
+		default:
+
+		}
+	}
+
+}
+
+func getLocalStrAddress() {
 	var str string
 	str = "1111"
 	fmt.Printf("str's addres:%v\n", &str)
 
-	addressCollect(uintptr(unsafe.Pointer(&str)))
+	addressCollect("str", &str)
 }
 
-func addressCollect(a uintptr) {
-	addresses = append(addresses, a)
-}
-
-// todo 存在bug
-func compareAddresses(addresses []uintptr) {
-	for i, address := range addresses {
-		fmt.Printf("Address %d: %x\n", i, address)
-	}
-
-	if len(addresses) < 2 {
-		return
-	}
-
-	smallest := addresses[0]
-	largest := addresses[0]
-
-	for _, address := range addresses {
-		if address < smallest {
-			smallest = address
-		}
-		if address > largest {
-			largest = address
-		}
-	}
-
-	fmt.Printf("Smallest address: %x\n", smallest)
-	fmt.Printf("Largest address: %x\n", largest)
+// 收集不同变量地址
+func addressCollect(name string, data interface{}) {
+	addressStr := fmt.Sprintf("%p", data)
+	addresses = append(addresses, addressInfo{name: name, address: addressStr})
 }
 
 func compareAddress() {
-	for i := 0; i < len(addresses); i++ {
-		fmt.Println("排序前数据：", addresses[i])
-	}
+	// 实现排序函数
+	sort.Slice(addresses, func(i, j int) bool {
+		return addresses[i].address10Data < addresses[j].address10Data
+	})
 
-	compareAddresses(addresses)
+	// 打印排序后的内存地址
+	fmt.Println("排序后的数据")
+	for _, addr := range addresses {
+		fmt.Printf("%v\n", addr)
+	}
 
 }
