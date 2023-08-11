@@ -2,128 +2,79 @@ package main
 
 import (
 	"fmt"
-	"sort"
-	"strconv"
 )
 
-/*
-	1. 验证slice作为函数参数传递
-	2. 验证 int（stack） make slice（heap） global param 在内存中的分布情况
+type Stack []int
 
-*/
-
-var a [10]int32 // 全局数据
-var addresses []addressInfo
-
-type addressInfo struct {
-	name          string
-	address       string
-	address10Data int64
+func NewStack() *Stack {
+	s := make(Stack, 0, 10)
+	return &s
 }
 
-func init() {
-	addresses = make([]addressInfo, 0, 10) // 地址比较排序，用于查看不同类型变量，内存高低
+func (s *Stack) Push(v int) {
+	*s = append(*s, v)
 }
 
-func sliceParam(s []int32) []int32 {
-	s[0] = 1111
-	s = append(s, 100)
+func (s *Stack) Pop() (int, bool) {
+	if len(*s) == 0 {
+		return 0, false
+	}
 
-	fmt.Printf("s info: %v\n", s)
-	return s
+	x, n := *s, len(*s)
+	/*
+		1.x 和 n 的解构赋值：x, n := *s, len(*s)
+		*s 是栈对象的切片，通过解引用操作获取栈对象的底层切片。
+		len(*s) 获取了栈对象底层切片的长度，即栈中元素的个数。
+		x 是一个临时变量，引用了栈对象的底层切片。
+		n 是一个变量，保存了栈的长度。
+
+		2.弹出栈顶元素：v := x[n-1]
+		n-1 表示栈的顶部元素的索引，我们通过索引操作来获取栈顶元素的值。由于切片索引是从 0 开始的，所以栈顶元素的索引为 n-1。
+		x[n-1] 表示获取栈顶元素的值，并将其赋给变量 v。
+
+		3.更新栈对象：*s = x[:n-1]
+		x[:n-1] 表示切片操作，从底层切片 x 中截取一个新的切片，包含了除了栈顶元素之外的所有元素。切片操作的语法是 切片[起始索引:结束索引]，如果省略起始索引，则默认为 0；如果省略结束索引，则默认为切片的长度。
+		*s = x[:n-1] 表示将截取的新切片赋值给栈对象的切片，即更新了栈对象，将栈顶元素弹出。
+
+	*/
+	v := x[n-1]
+	*s = x[:n-1]
+
+	return v, true
 }
 
-func showSliceParam(s []int32) {
-	for i := 0; i < len(s); i++ {
-		fmt.Println("showSliceParam：", s[i])
+func stackBySlice() {
+	s := NewStack()
+
+	// push
+	for i := 0; i < 5; i++ {
+		s.Push(i + 10)
+	}
+
+	// pop
+	for i := 0; i < 7; i++ {
+		fmt.Println(s.Pop())
 	}
 }
 
-func getGlobalIntAddress() {
-	a[0] = 10
-	fmt.Printf("globel array's addres:%v\n", &a[0])
+// ---------------------------
+func test() {
+	s1 := make([]int, 0, 10)
+	s1 = append(s1, 10)
+	s1 = append(s1, 110)
 
-	addressCollect("global int", &a[0])
-}
+	x, n := &s1, len(s1)
+	v := (*x)[n-1]
+	//*s = x[:n-1]
 
-func getHeapInt64Address() {
-	anewint64 := new(int64)
-	var tanewint64 int64 = 100
-	anewint64 = &tanewint64
-	fmt.Printf("anewint64's addres:%v\n", &anewint64)
-	addressCollect("new(int64)", &anewint64)
-}
-
-func convertAddress(addresses []addressInfo) {
-	for i := 0; i < len(addresses); i++ {
-		addresses[i].address10Data = _16to10(addresses[i].name, addresses[i].address)
-	}
-}
-
-func _16to10(name, hexString string) int64 {
-	decimal, err := strconv.ParseInt(hexString, 0, 64)
-	if err != nil {
-		fmt.Println("转换出错:", err)
-		return -1
-	}
-	fmt.Printf(name)
-	fmt.Printf("相关数据,十六进制: %v, 十进制：%d\n", hexString, decimal)
-	return decimal
+	fmt.Println(v)
+	fmt.Println(s1)
+	fmt.Println(&s1[0])
+	fmt.Println(*x)
+	fmt.Println(&(*x)[0])
 }
 
 func main() {
-	// 切片作为参数
-	sparam := make([]int32, 0, 10)
-	sparam = append(sparam, 1)
-	sparam = append(sparam, 2)
-
-	// 切片作为参数
-	sparam = sliceParam(sparam)
-	println("sparam addrres:", &sparam[0])
-
-	// 测试 slice int global 变量在内存地址的位置
-	fmt.Println("=========== compareAddress =============")
-	getLocalStrAddress()
-	getGlobalIntAddress()
-	getHeapInt64Address()
-
-	convertAddress(addresses)
-
-	compareAddress()
-
-	for {
-		select {
-		default:
-
-		}
-	}
-
-}
-
-func getLocalStrAddress() {
-	var str string
-	str = "1111"
-	fmt.Printf("str's addres:%v\n", &str)
-
-	addressCollect("str", &str)
-}
-
-// 收集不同变量地址
-func addressCollect(name string, data interface{}) {
-	addressStr := fmt.Sprintf("%p", data)
-	addresses = append(addresses, addressInfo{name: name, address: addressStr})
-}
-
-func compareAddress() {
-	// 实现排序函数
-	sort.Slice(addresses, func(i, j int) bool {
-		return addresses[i].address10Data < addresses[j].address10Data
-	})
-
-	// 打印排序后的内存地址
-	fmt.Println("排序后的数据")
-	for _, addr := range addresses {
-		fmt.Printf("%v\n", addr)
-	}
-
+	test()
+	//stackBySlice()
 }

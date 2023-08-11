@@ -1,4 +1,5 @@
-//package main.go.go
+package main
+
 //
 //import "fmt"
 //
