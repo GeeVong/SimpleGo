@@ -75,6 +75,6 @@ func test() {
 }
 
 func main() {
-	test()
-	//stackBySlice()
+	//test()
+	stackBySlice()
 }

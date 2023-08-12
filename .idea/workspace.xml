@@ -5,27 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47fd955d-cfd1-41ac-85fa-84f9d7c84376" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/base/dataType/datatype.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/checksomething/getNasmCode/vars.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/checksomething/getNasmCode/vars.s" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/checksomething/varInMem/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/base/binary/binary_bitwise_operation.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/array/array.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/array/array.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/channel/channel.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/channel/channel.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/channel/create.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/channel/create.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/channel/using.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/channel/using.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/hashtable/hashtable.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/checksomething/hashtable/hashtable.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/rabbitMQ/direct/main" beforeDir="false" afterPath="$PROJECT_DIR$/src/checksomething/rabbitMQ/direct/main" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/rabbitMQ/simque/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/checksomething/rabbitMQ/simque/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/rabbitMQ/simque/simqueRcv/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/checksomething/rabbitMQ/simque/simqueRcv/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/rabbitMQ/simque/simqueSend/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/checksomething/rabbitMQ/simque/simqueSend/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/rabbitMQ/subscribe/publish/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/checksomething/rabbitMQ/subscribe/publish/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/rabbitMQ/subscribe/subscribe/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/checksomething/rabbitMQ/subscribe/subscribe/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/rabbitMQ/topic/main" beforeDir="false" afterPath="$PROJECT_DIR$/src/checksomething/rabbitMQ/topic/main" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/rabbitMQ/work/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/checksomething/rabbitMQ/work/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/dataType/datatype.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/dataType/datatype.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/enum/emum.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/base/t-slice/tslice.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/t-slice/tslice.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/xxl/1.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/xxl/1.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checksomething/getNasmCode/vars.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/checksomething/getNasmCode/vars.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checksomething/getNasmCode/vars.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checksomething/getNasmCode/vars.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checksomething/getNasmCode/vars1.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checksomething/varInMem/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/checksomething/varInMem/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +94,7 @@
       <recent name="$PROJECT_DIR$/src/base/rabbitMQ/subscribe/publish" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build base/dataType">
+  <component name="RunManager" selected="Go Build.go build vars.go (1)">
     <configuration name="go build base/dataType" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="golangReview" />
       <working_directory value="$PROJECT_DIR$" />
@@ -124,12 +113,13 @@
       <filePath value="$PROJECT_DIR$/src/base/enum/emum.go" />
       <method v="2" />
     </configuration>
-    <configuration name="go build main.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build checksomething/getNasmCode" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="golangReview" />
       <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
+      <kind value="PACKAGE" />
+      <package value="checksomething/getNasmCode" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/src/checksomething/varInMem/main.go" />
+      <filePath value="$PROJECT_DIR$/src/checksomething/getNasmCode/vars.go" />
       <method v="2" />
     </configuration>
     <configuration name="go build tslice.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
@@ -140,37 +130,28 @@
       <filePath value="$PROJECT_DIR$/src/base/t-slice/tslice.go" />
       <method v="2" />
     </configuration>
-    <configuration name="go build vars.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build vars.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="golangReview" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/src/checksomething/varInMem/vars.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="simqueRcv" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
-      <module name="golangReview" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/src/base/rabbitMQ/work/main.go|$PROJECT_DIR$/src/base/rabbitMQ/simque/simqueRcv/main.go|$PROJECT_DIR$/src/base/rabbitMQ/work/main.go" />
+      <filePath value="$PROJECT_DIR$/src/checksomething/getNasmCode/vars.go" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Build.simqueRcv" />
+      <item itemvalue="Go Build.go build checksomething/getNasmCode" />
+      <item itemvalue="Go Build.go build vars.go (1)" />
       <item itemvalue="Go Build.go build base/dataType" />
       <item itemvalue="Go Build.go build base/enum" />
-      <item itemvalue="Go Build.go build main.go (1)" />
       <item itemvalue="Go Build.go build tslice.go" />
-      <item itemvalue="Go Build.go build vars.go" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build base/dataType" />
-        <item itemvalue="Go Build.go build base/enum" />
+        <item itemvalue="Go Build.go build vars.go (1)" />
+        <item itemvalue="Go Build.go build checksomething/getNasmCode" />
         <item itemvalue="Go Build.go build tslice.go" />
-        <item itemvalue="Go Build.go build vars.go" />
-        <item itemvalue="Go Build.go build main.go (1)" />
+        <item itemvalue="Go Build.go build base/enum" />
+        <item itemvalue="Go Build.go build base/dataType" />
       </list>
     </recent_temporary>
   </component>
@@ -242,10 +223,38 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/src/base/dataType/datatype.go</url>
-          <line>105</line>
+          <line>108</line>
           <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/src/base/binary/binary_bitwise_operation.go</url>
+          <line>105</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/src/base/t-slice/tslice.go</url>
+          <line>73</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/src/base/t-slice/tslice.go</url>
+          <line>42</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/src/checksomething/getNasmCode/vars.go</url>
+          <line>43</line>
+          <option name="timeStamp" value="60" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="GoApplicationRunConfiguration">
+        <watch expression="&amp;data_heap_slice" language="go" />
+        <watch expression="&amp;data_heap_slice[0]" language="go" />
+        <watch expression="&amp;data_stack_int" language="go" />
+        <watch expression="&amp;data_global_i" language="go" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

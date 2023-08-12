@@ -41,7 +41,7 @@ import (
 */
 
 func calculateMaxValue(nbit int, isUnsigned bool) {
-	if !isUnsigned {
+	if isUnsigned {
 		// 计算有符号整数的数据范围
 		minSigned := -int(math.Pow(2, float64(nbit-1)))
 		maxSigned := int(math.Pow(2, float64(nbit-1))) - 1
@@ -61,9 +61,9 @@ func testMinMax(i interface{}, isUnsigned bool) {
 	fmt.Print("  最小值:", minValue)
 	fmt.Print("  最大值:", maxValue)
 	if 0 != size && isUnsigned {
-		fmt.Printf("  2^%d:", size*8)
-	} else {
 		fmt.Printf("  2^(%d-1)-1:", size*8)
+	} else {
+		fmt.Printf("  2^%d:", size*8)
 	}
 
 	calculateMaxValue(size*8, isUnsigned)
@@ -91,6 +91,10 @@ func getTypeDetails(i interface{}) (int, interface{}, interface{}) {
 		minValue := math.MinInt
 		maxValue := math.MaxInt
 		return size, minValue, maxValue
+	case reflect.Int8:
+		minValue := math.MinInt8
+		maxValue := math.MaxInt8
+		return size, minValue, maxValue
 	default:
 		return -1, nil, nil
 	}
@@ -102,17 +106,23 @@ func typeSize(typ reflect.Type) int {
 }
 
 func main() {
-
 	//var b bool = true
-	//testMinMax(b, true)
+	//testMinMax(b, false)
 	//
 	//var d_byte byte = 2
-	//testMinMax(d_byte, true)
+	//testMinMax(d_byte, false)
 	//
 	//var i32 int32 = -2147483648
-	//testMinMax(i32, false)
+	//testMinMax(i32, true)
 
-	var iint int = 1
-	testMinMax(iint, false)
+	//var iint int = 1
+	//testMinMax(iint, true)
+	//
+	//var iint8 int8 = 2
+	//testMinMax(iint8, true)
+	a, b, c := 0b1010, 0o144, 0x64
+
+	fmt.Printf("0b%b, %#o, %#x\n", a, b, c)
+	fmt.Println(math.MinInt8, math.MaxInt8)
 
 }
