@@ -15,7 +15,7 @@ import (
 	 int,   uint        8           0         x86:4, x64:8
 	 int8,  uint8       1           0         -128 ~ 127,     0 ~ 255
 	 int16, uint16      2           0         -32768 ~ 32767, 0 ~ 65535
-	 int32, uint32      4           0
+int32(rune), uint32     4           0
 	 int64, uint64      8           0
 
 	 float32            4          0.0
@@ -24,7 +24,7 @@ import (
 	 complex64          8
 	 complex128        16
 
-	 rune               4           0         unicode code point, int32
+rune(uint8)     		4           0         unicode code point, int32
 	 uintptr            8           0         uint
 
 	 string                        ""         len()

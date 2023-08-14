@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47fd955d-cfd1-41ac-85fa-84f9d7c84376" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/base/binary/binary_bitwise_operation.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/base/goto/goto.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/base/dataType/datatype.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/dataType/datatype.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/enum/emum.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/t-slice/tslice.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/t-slice/tslice.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checksomething/getNasmCode/vars.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/checksomething/getNasmCode/vars.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checksomething/getNasmCode/vars.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checksomething/getNasmCode/vars.s" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checksomething/getNasmCode/vars1.s" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checksomething/varInMem/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/checksomething/varInMem/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,16 +87,7 @@
       <recent name="$PROJECT_DIR$/src/base/rabbitMQ/subscribe/publish" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build vars.go (1)">
-    <configuration name="go build base/dataType" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="golangReview" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="base/dataType" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/src/base/dataType/datatype.go" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Go Build.go build base/goto">
     <configuration name="go build base/enum" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="golangReview" />
       <working_directory value="$PROJECT_DIR$" />
@@ -111,6 +95,15 @@
       <package value="base/enum" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$/src/base/enum/emum.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build base/goto" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="golangReview" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="base/goto" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/src/base/goto/goto.go" />
       <method v="2" />
     </configuration>
     <configuration name="go build checksomething/getNasmCode" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
@@ -139,19 +132,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Go Build.go build base/goto" />
       <item itemvalue="Go Build.go build checksomething/getNasmCode" />
       <item itemvalue="Go Build.go build vars.go (1)" />
-      <item itemvalue="Go Build.go build base/dataType" />
       <item itemvalue="Go Build.go build base/enum" />
       <item itemvalue="Go Build.go build tslice.go" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build base/goto" />
         <item itemvalue="Go Build.go build vars.go (1)" />
         <item itemvalue="Go Build.go build checksomething/getNasmCode" />
         <item itemvalue="Go Build.go build tslice.go" />
         <item itemvalue="Go Build.go build base/enum" />
-        <item itemvalue="Go Build.go build base/dataType" />
       </list>
     </recent_temporary>
   </component>
@@ -242,8 +235,8 @@
           <option name="timeStamp" value="58" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/src/checksomething/getNasmCode/vars.go</url>
-          <line>43</line>
+          <url>file://$PROJECT_DIR$/src/checksomething/varInMem/vars.go</url>
+          <line>52</line>
           <option name="timeStamp" value="60" />
         </line-breakpoint>
       </breakpoints>
