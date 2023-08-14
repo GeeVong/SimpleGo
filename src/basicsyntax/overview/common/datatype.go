@@ -1,4 +1,4 @@
-package main
+package common
 
 import (
 	"fmt"
@@ -54,7 +54,7 @@ func calculateMaxValue(nbit int, isUnsigned bool) {
 	}
 }
 
-func testMinMax(i interface{}, isUnsigned bool) {
+func TestMinMax(i interface{}, isUnsigned bool) {
 	size, minValue, maxValue := getTypeDetails(i)
 	fmt.Print(reflect.ValueOf(i).Kind())
 	fmt.Print("  字节大小:", size)
@@ -103,26 +103,4 @@ func getTypeDetails(i interface{}) (int, interface{}, interface{}) {
 func typeSize(typ reflect.Type) int {
 	size := typ.Size()
 	return int(size)
-}
-
-func main() {
-	//var b bool = true
-	//testMinMax(b, false)
-	//
-	//var d_byte byte = 2
-	//testMinMax(d_byte, false)
-	//
-	//var i32 int32 = -2147483648
-	//testMinMax(i32, true)
-
-	//var iint int = 1
-	//testMinMax(iint, true)
-	//
-	//var iint8 int8 = 2
-	//testMinMax(iint8, true)
-	a, b, c := 0b1010, 0o144, 0x64
-
-	fmt.Printf("0b%b, %#o, %#x\n", a, b, c)
-	fmt.Println(math.MinInt8, math.MaxInt8)
-
 }

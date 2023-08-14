@@ -1,4 +1,4 @@
-package main
+package common
 
 import "fmt"
 
@@ -24,7 +24,7 @@ func testJump() {
 break: 终止 switch/for/select
 continue：仅仅用于for，进入下一层循环
 */
-func testContinue() {
+func TestContinue() {
 	for i := 0; i < 10; i++ {
 		if i%2 == 0 {
 			continue // 立即进入下轮循环。(goto next)
@@ -39,7 +39,7 @@ func testContinue() {
 }
 
 // todo  outer/inner 是用来干嘛的
-func testOuter() {
+func TestOuter() {
 outer:
 	for x := 0; x < 10; x++ {
 
@@ -57,10 +57,4 @@ outer:
 			print(x, ":", y, " ")
 		}
 	}
-}
-func main() {
-
-	//testGoto()
-	//testContinue()
-	testOuter()
 }

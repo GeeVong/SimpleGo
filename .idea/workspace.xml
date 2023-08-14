@@ -5,9 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47fd955d-cfd1-41ac-85fa-84f9d7c84376" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/base/goto/goto.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/basicsyntax/overview/common/com.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/basicsyntax/overview/overview_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/dataType/datatype.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/dataType/datatype.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/array/array.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/array/array.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/binary/binary_bitwise_operation.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/binary/binary_bitwise_operation.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/context/context.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/context/context.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/create.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/create.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/dataType/datatype.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/overview/common/datatype.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/file/file.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/file/file.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/goto/goto.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/overview/common/goto.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/helloworld/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/helloworld/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/helloworld/hello" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/helloworld/hello" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/helloworld/hello.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/helloworld/hello.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/htmlserver/htmlserver.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/htmlserver/htmlserver.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/locks/create.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/locks/create.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/locks/syncAtomic/syncAtomic.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/locks/syncAtomic/syncAtomic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/locks/syncCond/syncCond.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/locks/syncCond/syncCond.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/locks/syncMutex/syncMutex.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/locks/syncMutex/syncMutex.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/locks/syncOnce/syncOnce.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/locks/syncOnce/syncOnce.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/locks/syncRWMutex/syncRWMutex.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/locks/syncRWMutex/syncRWMutex.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/locks/syncWaitGroup/syncWaitGroup.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/locks/syncWaitGroup/syncWaitGroup.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/mapt/mapt.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/mapt/mapt.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/pprof/profile/cpu.profile" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/pprof/profile/cpu.profile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/pprof/profile/mem.profile" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/pprof/profile/mem.profile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/pprof/tpprof.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/pprof/tpprof.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/reflect/reflect.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/reflect/reflect.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/reflect/test1.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/reflect/test1.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/sort/qsort.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/sort/qsort.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/struct/struct.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/struct/struct.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/t-slice/main.s" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/t-slice/main.s" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/t-slice/tslice" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/t-slice/tslice" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/t-slice/tslice.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/t-slice/tslice.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/tInferface/tInterface.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/tInferface/tInterface.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/xxl/1.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/xxl/1.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/xxl/xxl.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/xxl/xxl.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +103,7 @@
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.goide.configuration.GoLibrariesConfigurableProvider&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -80,71 +113,83 @@
       <recent name="$PROJECT_DIR$/src/base/locks" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/basicsyntax/overview/common" />
+      <recent name="$PROJECT_DIR$/src/basicsyntax/overview" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/checksomething/getNasmCode" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/tool" />
-      <recent name="$PROJECT_DIR$/src/base/rabbitMQ/subscribe/publish" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build base/goto">
-    <configuration name="go build base/enum" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.TestBasicType in basicsyntax/overview">
+    <configuration name="TestBasicType in basicsyntax/overview" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="golangReview" />
-      <working_directory value="$PROJECT_DIR$" />
+      <working_directory value="$PROJECT_DIR$/src/basicsyntax/overview" />
       <kind value="PACKAGE" />
-      <package value="base/enum" />
+      <package value="basicsyntax/overview" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/src/base/enum/emum.go" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestBasicType\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build base/goto" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="TestDefer in basicsyntax/overview" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="golangReview" />
-      <working_directory value="$PROJECT_DIR$" />
+      <working_directory value="$PROJECT_DIR$/src/basicsyntax/overview" />
       <kind value="PACKAGE" />
-      <package value="base/goto" />
+      <package value="basicsyntax/overview" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/src/base/goto/goto.go" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestDefer\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build checksomething/getNasmCode" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="TestError in basicsyntax/overview" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="golangReview" />
-      <working_directory value="$PROJECT_DIR$" />
+      <working_directory value="$PROJECT_DIR$/src/basicsyntax/overview" />
       <kind value="PACKAGE" />
-      <package value="checksomething/getNasmCode" />
+      <package value="basicsyntax/overview" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/src/checksomething/getNasmCode/vars.go" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestError\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build tslice.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="TestGoto in basicsyntax/overview" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="golangReview" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
+      <working_directory value="$PROJECT_DIR$/src/basicsyntax/overview" />
+      <kind value="PACKAGE" />
+      <package value="basicsyntax/overview" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/src/base/t-slice/tslice.go" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestGoto\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build vars.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="TestPanic in basicsyntax/overview" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="golangReview" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
+      <working_directory value="$PROJECT_DIR$/src/basicsyntax/overview" />
+      <kind value="PACKAGE" />
+      <package value="basicsyntax/overview" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/src/checksomething/getNasmCode/vars.go" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestPanic\E$" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Build.go build base/goto" />
-      <item itemvalue="Go Build.go build checksomething/getNasmCode" />
-      <item itemvalue="Go Build.go build vars.go (1)" />
-      <item itemvalue="Go Build.go build base/enum" />
-      <item itemvalue="Go Build.go build tslice.go" />
+      <item itemvalue="Go Test.TestBasicType in basicsyntax/overview" />
+      <item itemvalue="Go Test.TestDefer in basicsyntax/overview" />
+      <item itemvalue="Go Test.TestError in basicsyntax/overview" />
+      <item itemvalue="Go Test.TestGoto in basicsyntax/overview" />
+      <item itemvalue="Go Test.TestPanic in basicsyntax/overview" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build base/goto" />
-        <item itemvalue="Go Build.go build vars.go (1)" />
-        <item itemvalue="Go Build.go build checksomething/getNasmCode" />
-        <item itemvalue="Go Build.go build tslice.go" />
-        <item itemvalue="Go Build.go build base/enum" />
+        <item itemvalue="Go Test.TestBasicType in basicsyntax/overview" />
+        <item itemvalue="Go Test.TestGoto in basicsyntax/overview" />
+        <item itemvalue="Go Test.TestError in basicsyntax/overview" />
+        <item itemvalue="Go Test.TestPanic in basicsyntax/overview" />
+        <item itemvalue="Go Test.TestDefer in basicsyntax/overview" />
       </list>
     </recent_temporary>
   </component>
@@ -160,27 +205,27 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/src/base/htmlserver/htmlserver.go</url>
+          <url>file://$PROJECT_DIR$/src/basicsyntax/htmlserver/htmlserver.go</url>
           <line>15</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/src/base/locks/syncMutex/syncMutex.go</url>
+          <url>file://$PROJECT_DIR$/src/basicsyntax/locks/syncMutex/syncMutex.go</url>
           <line>18</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/src/base/xxl/xxl.go</url>
+          <url>file://$PROJECT_DIR$/src/basicsyntax/xxl/xxl.go</url>
           <line>44</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/src/base/xxl/xxl.go</url>
+          <url>file://$PROJECT_DIR$/src/basicsyntax/xxl/xxl.go</url>
           <line>79</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/src/base/xxl/xxl.go</url>
+          <url>file://$PROJECT_DIR$/src/basicsyntax/xxl/xxl.go</url>
           <line>18</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
@@ -195,42 +240,42 @@
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/src/base/reflect/reflect.go</url>
+          <url>file://$PROJECT_DIR$/src/basicsyntax/reflect/reflect.go</url>
           <line>21</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/src/base/pprof/tpprof.go</url>
+          <url>file://$PROJECT_DIR$/src/basicsyntax/pprof/tpprof.go</url>
           <line>25</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/src/base/pprof/tpprof.go</url>
+          <url>file://$PROJECT_DIR$/src/basicsyntax/pprof/tpprof.go</url>
           <line>56</line>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/src/base/pprof/tpprof.go</url>
+          <url>file://$PROJECT_DIR$/src/basicsyntax/pprof/tpprof.go</url>
           <line>23</line>
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/src/base/dataType/datatype.go</url>
+          <url>file://$PROJECT_DIR$/src/basicsyntax/overview/common/datatype.go</url>
           <line>108</line>
           <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/src/base/binary/binary_bitwise_operation.go</url>
+          <url>file://$PROJECT_DIR$/src/basicsyntax/binary/binary_bitwise_operation.go</url>
           <line>105</line>
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/src/base/t-slice/tslice.go</url>
+          <url>file://$PROJECT_DIR$/src/basicsyntax/t-slice/tslice.go</url>
           <line>73</line>
           <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/src/base/t-slice/tslice.go</url>
+          <url>file://$PROJECT_DIR$/src/basicsyntax/t-slice/tslice.go</url>
           <line>42</line>
           <option name="timeStamp" value="58" />
         </line-breakpoint>
@@ -238,6 +283,16 @@
           <url>file://$PROJECT_DIR$/src/checksomething/varInMem/vars.go</url>
           <line>52</line>
           <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/src/basicsyntax/overview/overview_test.go</url>
+          <line>106</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/src/basicsyntax/overview/overview_test.go</url>
+          <line>296</line>
+          <option name="timeStamp" value="65" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

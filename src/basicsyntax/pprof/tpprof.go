@@ -8,7 +8,7 @@ import (
 	"runtime/pprof"
 )
 
-var ProfilePath = "./src/base/pprof/profile/"
+var ProfilePath = "./src/basicsyntax/pprof/profile/"
 
 func fib(n int) int {
 	if n <= 1 {
