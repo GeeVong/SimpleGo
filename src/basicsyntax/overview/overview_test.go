@@ -1,7 +1,7 @@
 package main
 
 import (
-	"basicsyntax/overview/common"
+	"basicsyntax/common"
 	"fmt"
 	"math"
 	"math/cmplx"
