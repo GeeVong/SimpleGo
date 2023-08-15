@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47fd955d-cfd1-41ac-85fa-84f9d7c84376" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/basicsyntax/common/arrayopt.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/basicsyntax/common/pb/Message.pb.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/basicsyntax/common/stringopt_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/basicsyntax/common/com.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/common/com.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/basicsyntax/common/datatype.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/common/datatype.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/basicsyntax/overview/overview_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/overview/overview_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
