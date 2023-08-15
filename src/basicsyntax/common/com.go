@@ -6,15 +6,22 @@ import (
 	"reflect"
 )
 
-func GetVarType(variable string, i interface{}) {
-	tt := reflect.TypeOf(i)
+// todo 类型待补充
+func GetVarType(varName string, data interface{}) {
+	tt := reflect.TypeOf(data)
 	switch tt.Kind() {
 	case reflect.Slice:
-		fmt.Println(variable, "是 slice 类型")
+		fmt.Println(varName, "是 slice 类型")
 	case reflect.Array:
-		fmt.Println(variable, "是 array 类型")
+		fmt.Println(varName, "是 array 类型")
 	case reflect.Map:
-		fmt.Println(variable, "是 map 类型")
+		fmt.Println(varName, "是 map 类型")
+	case reflect.String:
+		fmt.Println(varName, "是 str 类型")
+	case reflect.Interface:
+		fmt.Println(varName, "是 Interface 类型")
+	case reflect.Int:
+		fmt.Println(varName, "是 int 类型")
 	}
 }
 

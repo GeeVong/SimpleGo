@@ -2,8 +2,9 @@ package main
 
 import (
 	"basicsyntax/common"
+	"basicsyntax/common/pb"
 	"fmt"
-	"math"
+	"github.com/golang/protobuf/proto"
 	"math/cmplx"
 	"os"
 	"reflect"
@@ -11,6 +12,8 @@ import (
 	"strconv"
 	"testing"
 	"time"
+	"unicode/utf8"
+	"unsafe"
 )
 
 /*
@@ -22,8 +25,8 @@ func TestVariable(t *testing.T) {
 	var c, python, java bool
 
 	// 声明不同类型的变量，并且赋值
-	var i bool = true
-	var j int = 2
+	var i = true
+	var j = 2
 
 	// 复杂变量声明
 	var (
@@ -44,30 +47,32 @@ func TestVariable(t *testing.T) {
 	fmt.Println(c, java, python, i, j, ToBe, MaxInt, z, constant)
 }
 
-// 基本
 func TestBasicType(t *testing.T) {
-	var b bool = true
-	common.TestMinMax(b, false)
-
-	var d_byte byte = 2
-	common.TestMinMax(d_byte, false)
-
-	var i32 int32 = -2147483648
-	common.TestMinMax(i32, true)
+	//var b = true
+	//common.TestMinMax(b, false)
+	//
+	//var d_byte byte = 2
+	//common.TestMinMax(d_byte, false)
+	//
+	//var i32 int32 = -2147483648
+	//common.TestMinMax(i32, true)
 
 	var iint int = 1
 	common.TestMinMax(iint, true)
 
-	var iint8 int8 = 2
-	common.TestMinMax(iint8, true)
+	var iuint8 uint8 = 2
+	common.TestMinMax(iuint8, false)
 
-	{
-		a, c := 0b1010, 0x64
-		b := 0o144
+	//var iint8 int8 = 2
+	//common.TestMinMax(iint8, true)
 
-		fmt.Printf("0b%b, %#o, %#x\n", a, b, c)
-		fmt.Println(math.MinInt8, math.MaxInt8)
-	}
+	//{
+	//	a, c := 0b1010, 0x64
+	//	b := 0o144
+	//
+	//	fmt.Printf("0b%b, %#o, %#x\n", a, b, c)
+	//	fmt.Println(math.MinInt8, math.MaxInt8)
+	//}
 }
 
 // 引用 todo
@@ -372,182 +377,372 @@ func TestPanic(t *testing.T) {
 /*
 	======================		数据		======================
 */
+// type rename, HPPCb  means handle callback function
+// and HPPCb is a type of function
+type HPPCb func(msg string, p proto.Message) bool
+type ProtoMgr struct {
+	ProtoMap map[string]HPPCb
+}
 
-func TestSwitch2(t *testing.T) {}
+// initialize ProtoMgr
+func (self *ProtoMgr) Init(param ...interface{}) bool {
+	self.ProtoMap = make(map[string]HPPCb, 0)
+	// do something else
+	return true
+}
+func (self *ProtoMgr) sayHello(protocol string, data proto.Message) bool {
+	fmt.Printf("protocol:%v data:%v\n", protocol, data)
+	fmt.Println("say hello function called!")
+	return true
+}
 
-//### 类型绑定与初始化
-//
-//Go 中的 type 关键字能够对某个类型进行重命名：
-//
-//```
-//// IntSlice 并不等价于 []int，但是可以利用类型转换进行转换
-//type IntSlice []int
-//a := IntSlice{1, 2}
-//```
-//
+func (self *ProtoMgr) RegisterHPPCb(proto string, handler HPPCb) bool {
+	self.ProtoMap[proto] = handler
+	return true
+}
+func TestTypeDefine(t *testing.T) {
+	pm := ProtoMgr{}
+	if !pm.Init() {
+		return
+	}
+	pm.RegisterHPPCb("sayhello", pm.sayHello)
 
-func TestSwitch1(t *testing.T) {}
+	time.Sleep(time.Second)
 
-// // 类型转换与判断
-// str, ok := val.(string);
-// ```
-//
-// ### 基本数据类型
-func TestSwitch4(t *testing.T) {}
+	handler := pm.ProtoMap["sayhello"]
+	handler("111", &pb.Pb{})
 
-// ```
-func TestSwitch3(t *testing.T) {}
+}
 
-// #### 字符串
-//
-// ```
-// // 多行字符串声明
-// hellomsg := `
-// "Hello" in Chinese is 你好 ('Ni Hao')
-// "Hello" in Hindi is नमस्ते ('Namaste')
-// `
-// ```
-//
-// 格式化字符串：
-func TestSwitch5(t *testing.T) {}
+// type conversion and type checking
+func TestCvAndCk(t *testing.T) {
+	var data interface{} = 12
 
-// ```
-// fmt.Println("Hello, 你好, नमस्ते, Привет, ᎣᏏᏲ") // basic print, plus newline
-// p := struct { X, Y int }{ 17, 2 }
-// fmt.Println( "My point:", p, "x coord=", p.X ) // print structs, ints, etc
-// s := fmt.Sprintln( "My point:", p, "x coord=", p.X ) // print to string variable
-//
-// fmt.Printf("%d hex:%x bin:%b fp:%f sci:%e",17,17,17,17.0,17.0) // c-ish format
-// s2 := fmt.Sprintf( "%d %f", 17, 17.0 ) // formatted print to string variable
-// ```
-//
-// ### 序列类型
-//
-// Array 与 Slice 都可以用来表示序列数据，二者也有着一定的关联。
-//
-// #### Array
-func TestSwitch6(t *testing.T) {}
+	// get data type
+	common.GetVarType("dataName", data)
+	str, ok := data.(string) // 判断myInterface是否为string类型
+	if ok {
+		fmt.Println("myInterface is a string:", str)
+	} else {
+		fmt.Println("myInterface is not a string")
+	}
 
-// 其中 Array 用于表示固定长度的，相同类型的序列对象，可以使用如下形式创建：
-//
-// ```
-// [N]Type
-// [N]Type{value1, value2, ..., valueN}
-//
-// // 由编译器自动计算数目
-// [...]Type{value1, value2, ..., valueN}
-// ```
-//
-// 其具体使用方式为：
-//
-// ```
-// // 数组声明
-// var a [10]int
-//
-// // 赋值
-// a[3] = 42
-//
-// // 读取
-// i := a[3]
-//
-// // 声明与初始化
-// var a = [2]int{1, 2}
-// a := [2]int{1, 2}
-// a := [...]int{1, 2}
-// ```
-//
-// Go 内置了 len 与 cap 函数，用于获取数组的尺寸与容量：
-//
-// ```
-// var arr = [3]int{1, 2, 3}
-// arr := [...]int{1, 2, 3}
-//
-// len(arr) // 3
-// cap(arr) // 3
-// ```
-//
-// 不同于 C/C++ 中的指针（Pointer）或者 Java 中的对象引用（Object Reference），Go 中的 Array 只是值（Value）。这也就意味着，当进行数组拷贝，或者函数调用中的参数传值时，会复制所有的元素副本，而非仅仅传递指针或者引用。显而易见，这种复制的代价会较为昂贵。
-//
-// #### Slice
-func TestSwitch7(t *testing.T) {}
+}
 
-// Slice 为我们提供了更为灵活且轻量级地序列类型操作，可以使用如下方式创建 Slice:
-//
-// ```
-// // 使用内置函数创建
-// make([]Type, length, capacity)
-// make([]Type, length)
-//
-// // 声明为不定长度数组
-// []Type{}
-// []Type{value1, value2, ..., valueN}
-//
-// // 对现有数组进行切片转换
-// array[:]
-// array[:2]
-// array[2:]
-// array[2:3]
-// ```
-//
-// 不同于 Array，Slice 可以看做更为灵活的引用类型（Reference Type），它并不真实地存放数组值，而是包含数组指针（ptr），len，cap 三个属性的结构体。换言之，Slice 可以看做对于数组中某个段的描述，包含了指向数组的指针，段长度，以及段的最大潜在长度，其结构如下图所示：
-//
-// ![img](assets/1460000014069224.png)
-//
-// ```
-// // 创建 len 为 5，cap 为 5 的 Slice
-// s := make([]byte, 5)
-//
-// // 对 Slice 进行二次切片，此时 len 为 2，cap 为 3
-// s = s[2:4]
-//
-// // 恢复 Slice 的长度
-// s = s[:cap(s)]
-// ```
-//
-// 需要注意的是， 切片操作并不会真实地复制 Slice 中值，只是会创建新的指向原数组的指针，这就保证了切片操作和操作数组下标有着相同的高效率。不过如果我们修改 Slice 中的值，那么其会 真实修改底层数组中的值，也就会体现到原有的数组中：
-//
-// ```
-// d := []byte{'r', 'o', 'a', 'd'}
-// e := d[2:]
-// // e == []byte{'a', 'd'}
-// e[1] = 'm'
-// // e == []byte{'a', 'm'}
-// // d == []byte{'r', 'o', 'a', 'm'}
-// ```
-//
-// Go 提供了内置的 append 函数，来动态为 Slice 添加数据，该函数会返回新的切片对象，包含了原始的 Slice 中值以及新增的值。如果原有的 Slice 的容量不足以存放新增的序列，那么会自动分配新的内存：
-//
-// ```
-// // len=0 cap=0 []
-// var s []int
-//
-// // len=1 cap=2 [0]
-// s = append(s, 0)
-//
-// // len=2 cap=2 [0 1]
-// s = append(s, 1)
-//
-// // len=5 cap=8 [0 1 2 3 4]
-// s = append(s, 2, 3, 4)
-//
-// // 使用 ... 来自动展开数组
-// a := []string{"John", "Paul"}
-// b := []string{"George", "Ringo", "Pete"}
-// a = append(a, b...) // equivalent to "append(a, b[0], b[1], b[2])"
-// // a == []string{"John", "Paul", "George", "Ringo", "Pete"}
-// ```
-//
-// 我们也可以使用内置的 copy 函数，进行 Slice 的复制，该函数支持对于不同长度的 Slice 进行复制，其会自动使用最小的元素数目。同时，copy 函数还能够自动处理使用了相同的底层数组之间的 Slice 复制，以避免额外的空间浪费。
-//
-// ```
-// func copy(dst, src []T) int
-//
-// // 申请较大的空间容量
-// t := make([]byte, len(s), (cap(s)+1)*2)
-// copy(t, s)
-// s = t
-// ```
-//
+/*
+string:
+
+	data struct string mem struct is like this:
+
+	 +-----------+          +---+---+---+---+---+
+	 |  pointer -|--------> | h | e | l | l | o |
+	 +-----------+          +---+---+---+---+---+
+	 |  len = 5  |
+	 +-----------+          [...]byte, UTF-8
+		header
+
+		// runtime/string.go
+		type stringStruct struct {
+			str unsafe.Pointer     // str *int   8 byte
+			len int
+		}
+
+		type stringStructDWARF struct {
+			str *byte				// str *uint8  1byte
+			len int
+		}
+
+		int  	字节大小:8  最小值:-9223372036854775808  最大值:9223372036854775807  2^(64-1)-1:  	64位有符号整数的数据范围: -9223372036854775808 到 9223372036854775807
+		uint8  	字节大小:1  最小值:0  					  最大值:255  				 2^8:  			8位无符号整数的数据范围: 0 到 255
+
+		编码 UTF-8，无 NULL 结尾，默认值 ""。
+		使用 `raw string` 定义原始字符串。
+		支持 !=、==、<、<=、>=、>、+、+=。
+		索引访问字节数组（非字符），不能获取元素地址。
+		切片返回子串，依旧指向原数组。
+		内置函数 len 返回字节数组长度。
+
+-
+*/
+func TestString(t *testing.T) {
+	{
+		/*
+			"雨痕"：这是一个包含中文字符的普通字符串，没有使用任何转义。
+			"\x61"：这是一个ASCII转义序列，表示小写字母'a'的十六进制编码，它在字符串中的位置对应'a'字符。
+			"\142"：这是一个八进制转义序列，表示小写字母'b'的八进制编码，它在字符串中的位置对应'b'字符。
+			"\u0041"：这是一个Unicode转义序列，表示大写字母'A'的Unicode码值，它在字符串中的位置对应'A'字符。
+		*/
+
+		s := "雨痕\x61\142\u0041"
+
+		bs := []byte(s)
+		rs := []rune(s) // rune/int32: unicode code point
+		fmt.Println(s)
+		fmt.Printf("% X, %d\n", s, len(s))
+		fmt.Printf("% X, %d\n", bs, utf8.RuneCount(bs))
+		fmt.Printf("%U, %d\n", rs, utf8.RuneCountInString(s))
+	}
+
+	{
+		s := "雨痕abc"
+
+		fmt.Printf("%X\n", s[1]) // 9B
+
+		// println(&s[1])
+		// invalid operation: cannot take address of s[1]
+	}
+
+	{
+		var s string
+		println(s == "") // true
+
+		// println(s == nil)
+		// invalid operation: mismatched types string and untyped nil
+	}
+
+	{
+		s := `line\r\n,
+  line 2`
+
+		println(s) // raw string
+	}
+
+	{
+		s := "ab" + // 跨行时，加法操作符必须在上行结尾。
+			"cd"
+
+		println(s == "abcd") // true
+		println(s > "abc")   // true
+	}
+
+	{
+		s := "hello, world!"
+		s2 := s[:4]
+
+		p1 := (*reflect.StringHeader)(unsafe.Pointer(&s))
+		p2 := (*reflect.StringHeader)(unsafe.Pointer(&s2))
+
+		fmt.Printf("%#v, %#v\n", p1, p2)
+		//&reflect.StringHeader{Data:0x1232a51, Len:13},
+		//&reflect.StringHeader{Data:0x1232a51, Len:4}
+	}
+
+	// 遍历
+	{
+		s := "雨痕"
+
+		// byte
+		for i := 0; i < len(s); i++ {
+			fmt.Printf("%d: %X\n", i, s[i])
+		}
+
+		// rune
+		for i, c := range s {
+			fmt.Printf("%d: %U\n", i, c)
+		}
+	}
+
+	// slice operator copy append
+	{
+		s := "de"
+
+		bs := make([]byte, 0)
+		bs = append(bs, "abc"...)
+		bs = append(bs, s...)
+
+		buf := make([]byte, 5)
+		copy(buf, "abc")
+		copy(buf[3:], s)
+
+		fmt.Printf("%s\n", bs)  // abcde
+		fmt.Printf("%s\n", buf) // abcde
+	}
+
+	// 标准库相关 todo
+	// 转换
+	{
+
+	}
+
+}
+
+/*
+array:
+
+	+---+---+---+----//---+----+
+	| 0 | 1 | 2 | ... ... | 99 |   [100]int
+	+---+---+---+----//---+----+
+
+-
+*/
+func TestArray(t *testing.T) {
+	{
+		var d1 [2]int // 编译期计算。
+		var d2 [2]int // 元素类型相同，长度不同！
+
+		d1 = d2
+		fmt.Println(d1)
+		//~~ cannot use [2]int as type [8]int in assignment
+	}
+
+	{ // 初始化
+		var a [4]int // 元素自动初始化为零。
+
+		b := [4]int{2, 5}         // 未提供初始值的元素自动初始化为 0。
+		c := [4]int{5, 3: 10}     // 可指定索引位置初始化。
+		d := [...]int{1, 2, 3}    // 编译器按初始化值数量确定数组长度。
+		e := [...]int{10, 3: 100} // 支持索引初始化，数组长度与此有关。
+
+		fmt.Println(a, b, c, d, e)
+
+		type user struct {
+			id   int
+			name string
+		}
+
+		uobj := [...]user{ // 这里不能省略。
+			{1, "zs"}, // 元素类型标签可省略。
+			{2, "ls"},
+		}
+		fmt.Println(uobj)
+		common.GetVarType("uobj", uobj)
+
+		// 多数组初始化
+		x := [...][2]int{
+			{1, 2},
+			{3, 4},
+		}
+
+		y := [...][3][2]int{
+			{
+				{1, 2},
+				{3, 4},
+				{5, 6},
+			},
+			{
+				{10, 11},
+				{12, 13},
+				{14, 15},
+			},
+		}
+
+		fmt.Println(x, len(x), cap(x)) // 2, 2
+		fmt.Println(y, len(y), cap(y)) // 2, 2
+	}
+
+	{ // if support element compare then the array is always support
+		var a, b [2]int
+		println(a == b) // true
+
+		c := [2]int{1, 2}
+		d := [2]int{0, 1}
+		println(c == d) // false
+	}
+
+	{
+		/*
+			array pointer:
+					&array,point to the entire array's pointer
+			element's pointer:
+					&array[0],the pointer point to the array's element
+			pointer array
+					[...]*int{&a,&b}
+
+		*/
+		d := [...]int{0, 1, 2, 3}
+
+		var p *[4]int = &d  // 数组指针。
+		var pe *int = &d[1] // 元素指针。
+
+		p[0] += 10 // 相当于 (*p)[0]
+		*pe += 20
+
+		fmt.Println(d)
+
+		{
+			a, b := 1, 2
+
+			d := [...]*int{&a, &b} // 指针数组。
+			*d[1] += 10            // d[1] 返回 b 指针。
+
+			fmt.Println(d)
+			fmt.Println(a, b)
+		}
+	}
+
+	common.ArrayOpt()
+
+}
+
+/*
+slice:
+
+		  +---------+            +---+---+----//---+----+
+		  |  array -|----------> | 0 | 1 | ... ... | 99 |
+		  +---------+            +---+---+----//---+----+
+		  |  len    |
+		  +---------+            array
+		  |  cap    |
+		  +---------+
+	     	header
+
+-
+
+		// runtime/slice.go
+		type slice struct {
+			array unsafe.Pointer
+			len   int
+			cap   int
+		}
+
+	s := a[2:6:8]
+	+---+---+---+---+---+---+---+---+---+---+
+	| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |   array
+	+---+---+---+---+---+---+---+---+---+---+
+			|               |       |           slice: [low : high : max]
+			|<--- s.len --->|       |
+			|                       |           len = high - low
+			|<------- s.cap ------->|           cap = max  - low
+*/
+func TestSlice(t *testing.T) {
+	a := [...]int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9} // array
+
+	s := a[2:6:8]
+
+	fmt.Println(s)
+	fmt.Println(len(s), cap(s))
+
+	// 引用原数组。
+
+	fmt.Printf("a: %p ~ %p\n", &a[0], &a[len(a)-1])
+	fmt.Printf("s: %p ~ %p\n", &s[0], &s[len(s)-1])
+
+	for i, x := range s {
+		fmt.Printf("s[%d]: %d\n", i, x)
+	}
+
+	/*
+
+		# 切片引用原数组，此图只为方便理解。
+		+---+---+---+---+---+---+---+---+---+---+
+		| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |   a: [10]int
+		+---+---+---+---+---+---+---+---+---+---+
+		        .                       .
+		        +---+---+---+---+---+---+
+		        | 2 | 3 | 4 | 5 |   |   |           s: a[2:6:8]
+		        +---+---+---+---+---+---+
+		        0   1   2   3
+
+
+		s[0]: 2
+		s[1]: 3
+		s[2]: 4
+		s[3]: 5
+
+	*/
+
+}
+
 // ### 映射类型
 func TestSwitch8(t *testing.T) {}
 
@@ -938,3 +1133,7 @@ func TestSwitch15(t *testing.T) {}
 //}
 //```
 //
+
+// unit testing
+
+// bench testing
