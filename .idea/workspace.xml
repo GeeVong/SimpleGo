@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="47fd955d-cfd1-41ac-85fa-84f9d7c84376" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/basicsyntax/common/com.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/common/com.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/basicsyntax/overview/overview_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/overview/overview_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,34 +45,37 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2S9fPdGqvPeM7IsqihNV4P1t4TU" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "configurable..is.expanded": "false",
-    "configurable.GoLibrariesConfigurable.is.expanded": "true",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "/Users/hq/GeeVong/SimpleGo/src/basicsyntax/common",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.goide.configuration.GoLibrariesConfigurableProvider"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;configurable..is.expanded&quot;: &quot;false&quot;,
+    &quot;configurable.GoLibrariesConfigurable.is.expanded&quot;: &quot;true&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/hq/GeeVong/SimpleGo/src/basicsyntax/common&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.goide.configuration.GoLibrariesConfigurableProvider&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/basicsyntax/common" />
@@ -87,19 +91,8 @@
       <recent name="$PROJECT_DIR$/src/checksomething/getNasmCode" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestSlice in basicsyntax/overview">
-    <configuration name="BenchmarkNormal in basicsyntax/common" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="SimpleGo" />
-      <working_directory value="$PROJECT_DIR$/src/basicsyntax/common" />
-      <kind value="PACKAGE" />
-      <package value="basicsyntax/common" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gobench" />
-      <pattern value="^\QBenchmarkNormal\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestArray in basicsyntax/overview" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.TestSlicePointer in basicsyntax/overview">
+    <configuration name="TestMap in basicsyntax/overview" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="SimpleGo" />
       <working_directory value="$PROJECT_DIR$/src/basicsyntax/overview" />
       <kind value="PACKAGE" />
@@ -107,10 +100,10 @@
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestArray\E$" />
+      <pattern value="^\QTestMap\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestBasicType in basicsyntax/overview" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestMethod in basicsyntax/overview" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="SimpleGo" />
       <working_directory value="$PROJECT_DIR$/src/basicsyntax/overview" />
       <kind value="PACKAGE" />
@@ -118,7 +111,7 @@
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestBasicType\E$" />
+      <pattern value="^\QTestMethod\E$" />
       <method v="2" />
     </configuration>
     <configuration name="TestSlice in basicsyntax/overview" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -130,6 +123,17 @@
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
       <pattern value="^\QTestSlice\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestSlicePointer in basicsyntax/overview" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="SimpleGo" />
+      <working_directory value="$PROJECT_DIR$/src/basicsyntax/overview" />
+      <kind value="PACKAGE" />
+      <package value="basicsyntax/overview" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestSlicePointer\E$" />
       <method v="2" />
     </configuration>
     <configuration name="TestString in basicsyntax/overview" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -144,19 +148,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Test.BenchmarkNormal in basicsyntax/common" />
-      <item itemvalue="Go Test.TestArray in basicsyntax/overview" />
-      <item itemvalue="Go Test.TestSlice in basicsyntax/overview" />
+      <item itemvalue="Go Test.TestMap in basicsyntax/overview" />
+      <item itemvalue="Go Test.TestMethod in basicsyntax/overview" />
+      <item itemvalue="Go Test.TestSlicePointer in basicsyntax/overview" />
       <item itemvalue="Go Test.TestString in basicsyntax/overview" />
-      <item itemvalue="Go Test.TestBasicType in basicsyntax/overview" />
+      <item itemvalue="Go Test.TestSlice in basicsyntax/overview" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestSlice in basicsyntax/overview" />
-        <item itemvalue="Go Test.TestArray in basicsyntax/overview" />
-        <item itemvalue="Go Test.TestBasicType in basicsyntax/overview" />
-        <item itemvalue="Go Test.BenchmarkNormal in basicsyntax/common" />
+        <item itemvalue="Go Test.TestSlicePointer in basicsyntax/overview" />
+        <item itemvalue="Go Test.TestMap in basicsyntax/overview" />
         <item itemvalue="Go Test.TestString in basicsyntax/overview" />
+        <item itemvalue="Go Test.TestMethod in basicsyntax/overview" />
+        <item itemvalue="Go Test.TestSlice in basicsyntax/overview" />
       </list>
     </recent_temporary>
   </component>
@@ -263,9 +267,14 @@
           <option name="timeStamp" value="66" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/src/basicsyntax/common/com.go</url>
-          <line>10</line>
-          <option name="timeStamp" value="68" />
+          <url>file://$PROJECT_DIR$/src/basicsyntax/overview/overview_test.go</url>
+          <line>524</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/src/basicsyntax/overview/overview_test.go</url>
+          <line>916</line>
+          <option name="timeStamp" value="74" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -276,6 +285,12 @@
         <watch expression="&amp;data_stack_int" language="go" />
         <watch expression="&amp;data_global_i" language="go" />
       </configuration>
+      <configuration name="GoTestRunConfiguration">
+        <watch expression="&amp;p" language="go" />
+      </configuration>
     </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/SimpleGo$TestSlice_in_basicsyntax_overview.out" NAME="TestSlice in basicsyntax/overview Coverage Results" MODIFIED="1692100985774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

@@ -520,6 +520,8 @@ func TestString(t *testing.T) {
 		s := "hello, world!"
 		s2 := s[:4]
 
+		common.GetStringHeader(s)
+		common.GetStringHeader(s2)
 		p1 := (*reflect.StringHeader)(unsafe.Pointer(&s))
 		p2 := (*reflect.StringHeader)(unsafe.Pointer(&s2))
 
@@ -602,12 +604,12 @@ func TestArray(t *testing.T) {
 			name string
 		}
 
-		uobj := [...]user{ // 这里不能省略。
+		uObj := [...]user{ // 这里不能省略。
 			{1, "zs"}, // 元素类型标签可省略。
 			{2, "ls"},
 		}
-		fmt.Println(uobj)
-		common.GetVarType("uobj", uobj)
+		fmt.Println(uObj)
+		common.GetVarType("uObj", uObj)
 
 		// 多数组初始化
 		x := [...][2]int{
@@ -708,9 +710,11 @@ func TestSlice(t *testing.T) {
 					|<------- s.cap ------->|           cap = max  - low
 	*/
 
+	//slice 内存结构
 	a := [...]int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9} // array
 
 	s := a[2:6:8]
+	common.GetVarType("S", s)
 
 	fmt.Println(s)
 	fmt.Println(len(s), cap(s))
@@ -741,26 +745,224 @@ func TestSlice(t *testing.T) {
 		s[1]: 3
 		s[2]: 4
 		s[3]: 5
-
 	*/
+
+	// len range 范围， cap 截取范围
+
+	{ //构造slice
+		a := [...]int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+		s := a[2:5:7]
+
+		fmt.Println(s, len(s), cap(s)) //
+
+		// 按初始化值，自动分配底层数组。
+		s1 := []int{0, 1, 2, 3}
+		fmt.Println(s1, len(s1), cap(s1))
+
+		// 自动创建底层数组。
+		s2 := make([]int, 5)
+		fmt.Println(s2, len(s2), cap(s2))
+
+		s3 := make([]int, 0, 5)
+		fmt.Println(s3, len(s3), cap(s3))
+
+		/*
+			s0: [2 3 4],	 len= 3, cap = 5
+			s1: [0 1 2 3],   len = 4, cap = 4
+			s2: [0 0 0 0 0], len = 5, cap = 5
+			s3: [],          len = 0, cap = 5
+		*/
+	}
+
+	{ // slice 初始化
+		p := func(s []int) {
+			fmt.Printf("%t, %d, %#v\n",
+				s == nil,
+				unsafe.Sizeof(s),
+				(*reflect.SliceHeader)(unsafe.Pointer(&s)))
+		}
+		// 仅分配 header 内存，未初始化。
+		var s1 []int
+		// s1[0] = 111   it wil be panic
+		//s1 = append(s1, 111)
+
+		// 初始化。
+		s2 := []int{}
+		//s2 = append(s2, 111)
+
+		// 调用 makeslice 初始化。
+		s3 := make([]int, 0)
+
+		p(s1)
+		p(s2)
+		p(s3)
+
+		/*
+			true,  24, &reflect.SliceHeader{Data:0x0, Len:0, Cap:0}
+			false, 24, &reflect.SliceHeader{Data:0x14b4d20, Len:0, Cap:0}
+			false, 24, &reflect.SliceHeader{Data:0x14b4d20, Len:0, Cap:0}
+		*/
+	}
+
+	{ // slice can convert to array/array pointer directly
+
+		/*
+			a 数组，s切片 两个数据都是指向同一块内存地址，引用
+		*/
+		var a [4]int = [...]int{0, 1, 2, 3}
+
+		// array -> slice: 指向原数组
+		//var s []int = a[:]
+		s := a[:]
+
+		//a 是 array 类型
+		//s a[:]是 slice 类型
+		common.GetVarType("a", a)
+		common.GetVarType("s a[:]", s)
+		println(&s[0] == &a[0]) // true
+
+		/*
+			a2 数组，s转换数组，值拷贝
+		*/
+		// slice -> array: 复制底层数组（片段）
+		a2 := [4]int(s)
+		println(&a2[0] == &a[0]) // false
+
+		/*
+			slice -> *array
+				var i *int  // 0xc000020450
+				b := 10
+				i = &b
+
+				var dd *[4]int
+				dd = (*[4]int)(s)
+				fmt.Println(dd == &a) // true
+		*/
+		// slice -> *array: 返回底层数组（片段）指针
+		p2 := (*[4]int)(s)
+
+		println(p2 == &a) // true
+	}
 
 }
 
+func TestSlicePointer(t *testing.T) {
+	a := [...]int{0, 1, 2, 3}
+	s := a[:]
+	s1 := a[0:2:3]
+
+	/*
+		the first element of a's address: 0xc00001e100
+		s,false, 24, &reflect.SliceHeader{Data:0xc00001e100, Len:4, Cap:4}
+		s1,false, 24, &reflect.SliceHeader{Data:0xc00001e100, Len:2, Cap:3}
+		-
+	*/
+	p := &s    // 切片指针
+	e := &s[1] // 元素指针
+	fmt.Println("the first element of a's address:", &a[0])
+	common.GetSliceHeader("s", s)
+	common.GetSliceHeader("s1", s1)
+
+	/*
+			Go has pointers. A pointer holds the memory address of a value.
+				内存 地址和指针 的问题
+					地址：内存中每个字节单位的编号
+					指针：指针是实体，需要分配内存空间，专门用来保持地址的整形变量
+				p 是一个指针变量，
+						1.有内存地址，地址为 0xc0000100d8
+						2.存储s切片header/也就是s切片底层数组a的首元素地址
+
+													p指针变量内存
+			9									  	+---------------------+
+			9                              	 		|0xc0000100d8(内存编号)|
+			9									  	+---------------------+
+			9							 p指针    	0xc000012058
+
+							slice
+		 	9 			  0xc0000100d8
+				          +---------+            +---+---+----//---+----+
+						  |  array -|----------> | 0 | 1 | ... ... | 99 |
+						  +---------+            +---+---+----//---+----+
+						  |  len    |			 0xc00001e100
+						  +---------+            	array
+						  |  cap    |
+						  +---------+
+					     	header
+
+				s切片的地址：0xc0000100d8
+				s:[0 1 2 3]
+				&s:&[0 1 2 3]
+				*(&s):[0 1 2 3]
+
+
+				*p,false, 24, &reflect.SliceHeader{Data:0xc00001e100, Len:4, Cap:4}
+				p:0xc0000100d8
+				*p:0xc00001e100
+				&(*p)[0]:0xc00001e100
+				&p:0xc000012058
+				*(&p):0xc0000100d8
+				e:0xc00001e108
+
+								数组指针直接指向元素所在内存。
+					切片指针指向 header 内存,也就是底层数组首元素地址 。
+	*/
+	fmt.Printf("s切片的地址：%p\n", &s)
+	fmt.Printf("s:%v \n", s)
+	fmt.Printf("&s:%v \n", &s)
+	fmt.Printf("*(&s):%v \n\n", *(&s))
+
+	// p切片指针
+	common.GetSliceHeader("*p", *p)
+	fmt.Printf("p:%p \n", p) // 也就是切片s的地址 0xc0000100d8
+	fmt.Printf("*p:%p \n", *p)
+	fmt.Printf("&(*p)[0]:%v \n", &(*p)[0])
+	fmt.Printf("&p:%p \n", &p) //  指针变量 p 自身的地址 0xc000012058
+	fmt.Printf("*(&p):%p \n", *(&p))
+
+	fmt.Printf("e:%v \n", e)
+	// _ = p[1]
+	//     ~~~~ invalid: cannot index p (variable of type *[]int)
+
+	_ = (*p)[1]
+
+	// 元素指针指向数组。
+
+	*e += 100
+
+	fmt.Println(e == &a[1]) // true
+	fmt.Println(a)          // [0 101 2 3]
+}
+
 // 映射类型 字典
-func TestMap(t *testing.T) {}
+func TestMap(t *testing.T) {
+
+}
 
 // 结构体
 func TestStruct(t *testing.T) {}
 
 // 指针
-func TestPointer(t *testing.T) {}
+func TestPointer(t *testing.T) {
+	/*
+		Go has pointers. A pointer holds the memory address of a value.
+				内存 地址和指针 的问题
+					地址：内存中每个字节单位的编号
+					指针：指针是实体，需要分配内存空间，专门用来保持地址的整形变量
+				p 是一个指针变量，
+						1.有内存地址，地址为 0xc0000100d8
+						2.存储s切片header/也就是s切片底层数组a的首元素地址
+			-
+	*/
+}
 
 /*
 	======================		method		======================
 
 -
 */
-func TestMethod(t *testing.T) {}
+func TestMethod(t *testing.T) { // 在切片中使用指针
+
+}
 
 /*
 	======================		interface		======================
