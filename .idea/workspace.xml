@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="47fd955d-cfd1-41ac-85fa-84f9d7c84376" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/basicsyntax/common/com.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/common/com.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adfe/t-slice/tslice.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/common/tslice.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/basicsyntax/overview/overview_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/overview/overview_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,14 +84,14 @@
       <recent name="$PROJECT_DIR$/src/base/locks" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/basicsyntax/common" />
       <recent name="$PROJECT_DIR$/src/basicsyntax" />
       <recent name="$PROJECT_DIR$/src/basicsyntax/overview/common" />
       <recent name="$PROJECT_DIR$/src/basicsyntax/overview" />
       <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/checksomething/getNasmCode" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestSlicePointer in basicsyntax/overview">
+  <component name="RunManager" selected="Go Test.TestSliceOther in basicsyntax/overview">
     <configuration name="TestMap in basicsyntax/overview" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="SimpleGo" />
       <working_directory value="$PROJECT_DIR$/src/basicsyntax/overview" />
@@ -114,7 +114,7 @@
       <pattern value="^\QTestMethod\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestSlice in basicsyntax/overview" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestSliceOther in basicsyntax/overview" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="SimpleGo" />
       <working_directory value="$PROJECT_DIR$/src/basicsyntax/overview" />
       <kind value="PACKAGE" />
@@ -122,7 +122,7 @@
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestSlice\E$" />
+      <pattern value="^\QTestSliceOther\E$" />
       <method v="2" />
     </configuration>
     <configuration name="TestSlicePointer in basicsyntax/overview" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -150,17 +150,17 @@
     <list>
       <item itemvalue="Go Test.TestMap in basicsyntax/overview" />
       <item itemvalue="Go Test.TestMethod in basicsyntax/overview" />
+      <item itemvalue="Go Test.TestSliceOther in basicsyntax/overview" />
       <item itemvalue="Go Test.TestSlicePointer in basicsyntax/overview" />
       <item itemvalue="Go Test.TestString in basicsyntax/overview" />
-      <item itemvalue="Go Test.TestSlice in basicsyntax/overview" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestSliceOther in basicsyntax/overview" />
         <item itemvalue="Go Test.TestSlicePointer in basicsyntax/overview" />
         <item itemvalue="Go Test.TestMap in basicsyntax/overview" />
         <item itemvalue="Go Test.TestString in basicsyntax/overview" />
         <item itemvalue="Go Test.TestMethod in basicsyntax/overview" />
-        <item itemvalue="Go Test.TestSlice in basicsyntax/overview" />
       </list>
     </recent_temporary>
   </component>

@@ -934,8 +934,52 @@ func TestSlicePointer(t *testing.T) {
 }
 
 // 映射类型 字典
-func TestMap(t *testing.T) {
+func TestSliceOther(t *testing.T) {
+	var a [4]int = [...]int{0, 1, 2, 3}
 
+	// 基于数组指针创建切片。
+	//var p *[4]int = &a
+	//var s []int = p[:]
+
+	s := a[:]
+
+	println(&s[2] == &a[2]) // true
+
+	// 基于非数组指针创建切片
+	p2 := (*byte)(unsafe.Pointer(&a[0])) // 元素指针
+	var s2 []byte = unsafe.Slice(p2, 8)
+
+	fmt.Println(s2)
+
+	// 交错数组功能
+	s3 := [][]int{
+		{1, 2},
+		{10, 20, 30},
+		{100},
+	}
+	common.GetVarType("s3", s3)
+
+	// 切片作为参数
+	common.SliceAsFunctionParam()
+
+	// slice append
+	common.TestSliceAppend()
+}
+
+// 映射类型 字典
+func TestMap(t *testing.T) {
+	/*
+			   pointer              header
+
+		  +-------+          +-----------+
+		  |  map -|--------> |  hmap     |
+		  +-------+          +-----------+
+		                     |  ...      |
+		                     +-----------+       +-----//-----+
+		                     |  buckets -|-----> | ...    ... |   array
+		                     +-----------+       +-----//-----+
+
+	*/
 }
 
 // 结构体
