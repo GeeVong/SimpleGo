@@ -980,22 +980,107 @@ func TestMap(t *testing.T) {
 		                     +-----------+       +-----//-----+
 
 	*/
+
+	// 创建map方式
+	m := make(map[string]int) // make
+	m1 := map[string]int{}    // 初始化空map
+	m4 := map[int]string{     // 使用字面量初始化
+		1: "value1",
+	}
+	fmt.Println(m4)
+
+	var m3 map[string]int // nil
+	if nil == m3 {
+		fmt.Println("m3 is nil")
+	} else {
+		fmt.Println("m3 not nil")
+	}
+
+	m1["age"] = 10086
+	m["dog"] = 13
+	m["salary"] = 100231
+
+	// 遍历
+	fmt.Println("m1 数据状态")
+	for k, v := range m1 {
+		fmt.Printf("k:%s ,value:%d \n", k, v)
+	}
+
+	//增，改
+	m["1"] = 1
+	m["1"] = 1111
+
+	fmt.Println("m 数据状态")
+	for k, v := range m {
+		fmt.Printf("k:%s ,value:%d \n", k, v)
+	}
+	// 查
+	v, f := m["ag1e"]
+	if !f {
+		fmt.Println("data not found")
+	} else {
+		fmt.Println(v)
+	}
+
+	// 删除
+	delete(m, "1")
+
 }
 
 // 结构体
-func TestStruct(t *testing.T) {}
+func TestStruct(t *testing.T) {
+	type node struct {
+		id   int    `field:"uid"  type:"integer"`
+		name string `field:"name" type:"text"`
+		next *node  // 自身指针类型。
+	}
 
-// 指针
+	n := node{
+		id:   2,
+		name: "abc", // 注意结尾逗号 !!!
+	}
+
+	n.next = &n
+	fmt.Println(n.next.name)
+
+	{
+
+		type User struct {
+			id   int    `field:"uid"  type:"integer"`
+			name string `field:"name" type:"text"`
+		}
+
+		t := reflect.TypeOf(User{})
+
+		for i := 0; i < t.NumField(); i++ {
+			f := t.Field(i)
+			fmt.Println(f.Name, f.Tag.Get("field"), f.Tag.Get("type"))
+		}
+	}
+
+	// 内存对齐 todo
+
+}
+
+// 指针 todo
 func TestPointer(t *testing.T) {
 	/*
-		Go has pointers. A pointer holds the memory address of a value.
-				内存 地址和指针 的问题
-					地址：内存中每个字节单位的编号
-					指针：指针是实体，需要分配内存空间，专门用来保持地址的整形变量
-				p 是一个指针变量，
-						1.有内存地址，地址为 0xc0000100d8
-						2.存储s切片header/也就是s切片底层数组a的首元素地址
-			-
+			Go has pointers. A pointer holds the memory address of a value.
+					内存 地址和指针 的问题
+						地址：内存中每个字节单位的编号
+						指针：指针是实体，需要分配内存空间，专门用来保持地址的整形变量
+					p 是一个指针变量，
+							1.有内存地址，地址为 0xc0000100d8
+							2.存储s切片header/也就是s切片底层数组a的首元素地址
+				-
+
+
+		            x: int          p: *int
+		   -------+---------------+--------------+-------
+		     ...  | 100           | 0xc000000000 |  ...    memory
+		   -------+---------------+--------------+-------
+		          0xc000000000    0xc000000008             address
+
 	*/
 }
 
