@@ -1184,6 +1184,33 @@ func TestConcurrency(t *testing.T) {
 
 	println("main")
 	time.Sleep(time.Second)
+
+	go func() {
+		defer println("g done.")
+		time.Sleep(time.Second)
+	}()
+
+	defer println("main done.")
+
+	q := make(chan struct{})
+
+	go func() {
+		defer close(q)
+		println("done.")
+	}()
+
+	<-q
+
+	for {
+		select {
+		default:
+
+		}
+	}
+}
+
+func TestChannel(t *testing.T) {
+	common.TChannel()
 }
 
 /*

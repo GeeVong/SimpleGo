@@ -251,7 +251,7 @@ func taskQueue() {
 	wg.Wait()
 }
 
-func main() {
+func TChannel() {
 	// createChannel()
 
 	// chan死锁: fatal error: all goroutines are asleep - deadlock!

@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47fd955d-cfd1-41ac-85fa-84f9d7c84376" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/basicsyntax/common/interfaceTest.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/basicsyntax/common/channel.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/common/channel.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/basicsyntax/overview/overview_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/overview/overview_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +91,18 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestConcurrency in basicsyntax/overview">
+  <component name="RunManager" selected="Go Test.TestChannel in basicsyntax/overview">
+    <configuration name="TestChannel in basicsyntax/overview" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="SimpleGo" />
+      <working_directory value="$PROJECT_DIR$/src/basicsyntax/overview" />
+      <kind value="PACKAGE" />
+      <package value="basicsyntax/overview" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestChannel\E$" />
+      <method v="2" />
+    </configuration>
     <configuration name="TestConcurrency in basicsyntax/overview" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="SimpleGo" />
       <working_directory value="$PROJECT_DIR$/src/basicsyntax/overview" />
@@ -136,31 +147,20 @@
       <pattern value="^\QTestPointer\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestStruct in basicsyntax/overview" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="SimpleGo" />
-      <working_directory value="$PROJECT_DIR$/src/basicsyntax/overview" />
-      <kind value="PACKAGE" />
-      <package value="basicsyntax/overview" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestStruct\E$" />
-      <method v="2" />
-    </configuration>
     <list>
+      <item itemvalue="Go Test.TestChannel in basicsyntax/overview" />
       <item itemvalue="Go Test.TestConcurrency in basicsyntax/overview" />
       <item itemvalue="Go Test.TestInterface in basicsyntax/overview" />
       <item itemvalue="Go Test.TestMethod in basicsyntax/overview" />
       <item itemvalue="Go Test.TestPointer in basicsyntax/overview" />
-      <item itemvalue="Go Test.TestStruct in basicsyntax/overview" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestChannel in basicsyntax/overview" />
         <item itemvalue="Go Test.TestConcurrency in basicsyntax/overview" />
         <item itemvalue="Go Test.TestInterface in basicsyntax/overview" />
         <item itemvalue="Go Test.TestMethod in basicsyntax/overview" />
         <item itemvalue="Go Test.TestPointer in basicsyntax/overview" />
-        <item itemvalue="Go Test.TestStruct in basicsyntax/overview" />
       </list>
     </recent_temporary>
   </component>
