@@ -1044,7 +1044,6 @@ func TestStruct(t *testing.T) {
 	fmt.Println(n.next.name)
 
 	{
-
 		type User struct {
 			id   int    `field:"uid"  type:"integer"`
 			name string `field:"name" type:"text"`
@@ -1082,15 +1081,66 @@ func TestPointer(t *testing.T) {
 		          0xc000000000    0xc000000008             address
 
 	*/
+	// 空指针也会分配内存。
+	var p *int
+	println(unsafe.Sizeof(p)) // 8
+
+	/*
+
+	   p: *int
+	   +--------------+
+	   | 0            |
+	   +--------------+
+	   0xc000000008
+
+	*/
+
+	var x int
+
+	/*
+
+	   p: *int                x: int
+	   +---------------+      +---------------+
+	   | 0             |      | 0             |
+	   +---------------+      +---------------+
+	   0xc000000008           0xc000000000
+
+	*/
+
+	// 二级指针，指针的指针。
+	var pp **int = &p
+	*pp = &x
+
+	/*
+
+	                               +--------- *p -----------+
+	                               |                        |
+	   pp: **int              p    |                 x      v
+	   +---------------+      +---------------+      +---------------+
+	   | 0xc000000008 -|----->| 0xc000000000 -|----->| 0             |
+	   +---------------+      +---------------+      +---------------+
+	   0xc000000010           0xc000000008   ^       0xc000000000   ^
+	         |                               |                      |
+	         +-------- *pp ------------------+                      |
+	         |                                                      |
+	         +-------- **pp ----------------------------------------+
+	*/
+
+	*p = 100
+	**pp += 1
+
+	println(**pp, *p, x) // 101, 101, 101
+
 }
 
 /*
 	======================		method		======================
+	对象实例绑定的特殊函数
 
 -
 */
 func TestMethod(t *testing.T) { // 在切片中使用指针
-
+	common.StackBySlice()
 }
 
 /*
@@ -1098,7 +1148,9 @@ func TestMethod(t *testing.T) { // 在切片中使用指针
 
 -
 */
-func TestInterface(t *testing.T) {}
+func TestInterface(t *testing.T) {
+	common.Test()
+}
 
 /*
 	======================		generic		======================
@@ -1115,7 +1167,24 @@ func TestGeneric(t *testing.T) {}
 
 -
 */
-func TestConcurrency(t *testing.T) {}
+
+func tt(x int) {
+	println(x)
+}
+func TestConcurrency(t *testing.T) {
+	// 打包并发任务（函数 + 参数）。
+	// 并非立即执行。
+
+	go println("abc")
+	go tt(123)
+	go func(x int) { println(x) }(123)
+
+	// 上述并发任务会被其他饥饿线程取走。
+	// 执行时间未知，下面这行可能先输出。
+
+	println("main")
+	time.Sleep(time.Second)
+}
 
 /*
 	======================		package		======================
