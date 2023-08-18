@@ -1168,15 +1168,12 @@ func TestGeneric(t *testing.T) {}
 -
 */
 
-func tt(x int) {
-	println(x)
-}
 func TestConcurrency(t *testing.T) {
 	// 打包并发任务（函数 + 参数）。
 	// 并非立即执行。
 
 	go println("abc")
-	go tt(123)
+
 	go func(x int) { println(x) }(123)
 
 	// 上述并发任务会被其他饥饿线程取走。
@@ -1211,6 +1208,10 @@ func TestConcurrency(t *testing.T) {
 
 func TestChannel(t *testing.T) {
 	common.TChannel()
+}
+
+func TestSync(t *testing.T) {
+	// 见common 中的lock
 }
 
 /*

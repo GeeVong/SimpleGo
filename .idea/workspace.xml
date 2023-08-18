@@ -6,7 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="47fd955d-cfd1-41ac-85fa-84f9d7c84376" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/basicsyntax/common/channel.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/common/channel.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adfe/locks/create.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/common/locks/create.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adfe/locks/syncAtomic/syncAtomic.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/common/locks/syncAtomic/syncAtomic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adfe/locks/syncCond/syncCond.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/common/locks/syncCond/syncCond.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adfe/locks/syncMutex/syncMutex.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/common/locks/syncMutex/syncMutex.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adfe/locks/syncOnce/syncOnce.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/common/locks/syncOnce/syncOnce.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adfe/locks/syncRWMutex/syncRWMutex.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/common/locks/syncRWMutex/syncRWMutex.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adfe/locks/syncWaitGroup/syncWaitGroup.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/common/locks/syncWaitGroup/syncWaitGroup.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/basicsyntax/overview/overview_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/overview/overview_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
