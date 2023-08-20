@@ -27,8 +27,8 @@ import (
 
 	如果一直接收不到发送方的数据，接收方阻塞；
 */
-func noBufferChan() {
-	ch := make(chan int) // 创建一个无缓冲通道
+func NoBufferChan() {
+	ch := make(chan int64) // 创建一个无缓冲通道
 	go func() {
 		fmt.Println("====222111")
 		val, ok := <-ch // 接收数据，接收方会被阻塞，由于数据还没接收到，
@@ -78,7 +78,7 @@ func bufferChan() {
 	fmt.Println("接收到数据:", val)
 }
 
-func createChannel() {
+func CreateChannel() {
 	type A struct {
 		a int
 		b float32
@@ -228,7 +228,7 @@ func worker(id int, taskQueue <-chan Task, wg *sync.WaitGroup) {
 	}
 }
 
-func taskQueue() {
+func TaskQueue() {
 	numWorkers := 5
 	numTasks := 10
 
@@ -249,27 +249,4 @@ func taskQueue() {
 
 	// 等待所有工作 Goroutine 结束
 	wg.Wait()
-}
-
-func TChannel() {
-	// createChannel()
-
-	// chan死锁: fatal error: all goroutines are asleep - deadlock!
-	//readDataFromNilCh()
-
-	// panic: send on closed channel
-	//writeDataFromCloseCh()
-
-	// 有无buffer chan的区别
-	noBufferChan()
-	bufferChan()
-
-	// 正确读写chan的方式.
-	//rightWayReadCh()
-	//rightWayWriteCh()
-
-	// chan 常使用方式 for + select
-	// TestForSelect()
-
-	taskQueue()
 }

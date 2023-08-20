@@ -1163,7 +1163,9 @@ func TestGeneric(t *testing.T) {}
 	======================		concurrency		======================
 	goroutine
 	channel
-	sync
+	sync:sync.WaitGroup，sync.RWMutex，sync.Mutex,sync.Cond，sync.Once，sync.Pool,种情况下推荐使用sync包：
+		对性能要求极高的临界区
+		保护某个结构内部状态和完整性
 
 -
 */
@@ -1207,11 +1209,25 @@ func TestConcurrency(t *testing.T) {
 }
 
 func TestChannel(t *testing.T) {
-	common.TChannel()
+	// create
+	// common.CreateChannel()
+
+	/*
+			handle work queue
+		create multi goroutine to handle the workers with channel
+		the channel passerby some value
+	*/
+	//common.TaskQueue()
+
+	/*
+		no buffer channel
+	*/
+	common.NoBufferChan()
 }
 
 func TestSync(t *testing.T) {
 	// 见common 中的lock
+
 }
 
 /*

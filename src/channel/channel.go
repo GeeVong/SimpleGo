@@ -21,10 +21,11 @@ import (
 */
 
 /*
-	对于无缓冲区channel：
-		发送的数据如果没有被接收方接收，那么发送方阻塞；
+对于无缓冲区channel：
 
-		如果一直接收不到发送方的数据，接收方阻塞；
+	发送的数据如果没有被接收方接收，那么发送方阻塞；goroutine
+
+	如果一直接收不到发送方的数据，接收方阻塞；
 */
 func noBufferChan() {
 	ch := make(chan int) // 创建一个无缓冲通道
@@ -46,10 +47,11 @@ func noBufferChan() {
 }
 
 /*
-	有缓冲的channel：
-		发送方在缓冲区满的时候阻塞，接收方不阻塞；
+有缓冲的channel：
 
-		接收方在缓冲区为空的时候阻塞，发送方不阻塞。
+	发送方在缓冲区满的时候阻塞，接收方不阻塞；
+
+	接收方在缓冲区为空的时候阻塞，发送方不阻塞。
 */
 func bufferChan() {
 	ch := make(chan int, 2) // 创建一个有缓冲大小为2的通道
@@ -102,7 +104,7 @@ func readDataFromNilCh() {
 	fmt.Println(msg)
 }
 
-//向一个已经被 close 的 channel 中继续发送数据会导致 run-time panic
+// 向一个已经被 close 的 channel 中继续发送数据会导致 run-time panic
 func writeDataFromCloseCh() {
 	ch := make(chan int)
 	close(ch)
@@ -110,8 +112,8 @@ func writeDataFromCloseCh() {
 	fmt.Println(<-ch)
 }
 
-//select 的 case 中建议不要出现非阻塞的条件
-//（如等待某个 channel 读事件，其他 routine 将此 channel 关闭，导致该 case 永远为真）
+// select 的 case 中建议不要出现非阻塞的条件
+// （如等待某个 channel 读事件，其他 routine 将此 channel 关闭，导致该 case 永远为真）
 func t() {
 	ch := make(chan int)
 

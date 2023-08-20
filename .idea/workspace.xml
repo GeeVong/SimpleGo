@@ -5,15 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47fd955d-cfd1-41ac-85fa-84f9d7c84376" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/channel/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/csp/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/select/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/adfe/locks/create.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/common/locks/create.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/adfe/locks/syncAtomic/syncAtomic.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/common/locks/syncAtomic/syncAtomic.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/adfe/locks/syncCond/syncCond.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/common/locks/syncCond/syncCond.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/adfe/locks/syncMutex/syncMutex.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/common/locks/syncMutex/syncMutex.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/adfe/locks/syncOnce/syncOnce.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/common/locks/syncOnce/syncOnce.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/adfe/locks/syncRWMutex/syncRWMutex.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/common/locks/syncRWMutex/syncRWMutex.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/adfe/locks/syncWaitGroup/syncWaitGroup.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/common/locks/syncWaitGroup/syncWaitGroup.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/basicsyntax/common/channel.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/common/channel.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/basicsyntax/overview/overview_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/overview/overview_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/channel/channel.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/channel/channel.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/gorilla/mux" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,19 +75,20 @@
     &quot;configurable.GoLibrariesConfigurable.is.expanded&quot;: &quot;true&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
     &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/hq/GeeVong/SimpleGo/src/basicsyntax/common&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/hq/GeeVong/SimpleGo/src/select&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.goide.configuration.GoLibrariesConfigurableProvider&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;go.autoimport&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/select" />
+      <recent name="$PROJECT_DIR$/src/csp" />
       <recent name="$PROJECT_DIR$/src/basicsyntax/common" />
       <recent name="$PROJECT_DIR$/src/base/rabbitMQ/simque/simqueRcv" />
       <recent name="$PROJECT_DIR$/src/base/channel" />
-      <recent name="$PROJECT_DIR$/src/base/locks" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/basicsyntax/common" />
@@ -281,6 +282,31 @@
           <url>file://$PROJECT_DIR$/src/basicsyntax/overview/overview_test.go</url>
           <line>916</line>
           <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$USER_HOME$/libs/go1.20.6/src/runtime/chan.go</url>
+          <line>192</line>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$USER_HOME$/libs/go1.20.6/src/runtime/chan.go</url>
+          <line>72</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$USER_HOME$/libs/go1.20.6/src/runtime/chan.go</url>
+          <line>64</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/src/basicsyntax/overview/overview_test.go</url>
+          <line>1224</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/src/basicsyntax/common/channel.go</url>
+          <line>31</line>
+          <option name="timeStamp" value="80" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
