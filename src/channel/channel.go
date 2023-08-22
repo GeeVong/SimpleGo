@@ -46,6 +46,23 @@ func noBufferChan() {
 
 }
 
+func bug01() int {
+	ch := make(chan int)
+	go func() {
+		ch <- 10 // 阻塞
+	}()
+
+	select {
+	case <-ch:
+		res := <-ch
+		return res
+	default:
+		fmt.Println("default")
+
+	}
+	return 0
+}
+
 /*
 有缓冲的channel：
 
@@ -261,8 +278,8 @@ func main() {
 	//writeDataFromCloseCh()
 
 	// 有无buffer chan的区别
-	noBufferChan()
-	bufferChan()
+	//noBufferChan()
+	//bufferChan()
 
 	// 正确读写chan的方式.
 	//rightWayReadCh()
@@ -271,5 +288,8 @@ func main() {
 	// chan 常使用方式 for + select
 	// TestForSelect()
 
-	taskQueue()
+	//taskQueue()
+
+	//bug
+	bug01()
 }

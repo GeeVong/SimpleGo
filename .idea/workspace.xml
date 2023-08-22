@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47fd955d-cfd1-41ac-85fa-84f9d7c84376" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/channel/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/csp/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/select/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/checksomething/mysql/optIndex.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/datarace/datarace_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/basicsyntax/common/channel.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/common/channel.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/basicsyntax/overview/overview_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/basicsyntax/overview/overview_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/channel/channel.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/channel/channel.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/github.com/gorilla/mux" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +47,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2S9fPdGqvPeM7IsqihNV4P1t4TU" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -75,20 +70,25 @@
     &quot;configurable.GoLibrariesConfigurable.is.expanded&quot;: &quot;true&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
     &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/hq/GeeVong/SimpleGo/src/select&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/hq/GeeVong/SimpleGo/src/checksomething/mysql&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;go.autoimport&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/checksomething/mysql" />
       <recent name="$PROJECT_DIR$/src/select" />
       <recent name="$PROJECT_DIR$/src/csp" />
       <recent name="$PROJECT_DIR$/src/basicsyntax/common" />
       <recent name="$PROJECT_DIR$/src/base/rabbitMQ/simque/simqueRcv" />
-      <recent name="$PROJECT_DIR$/src/base/channel" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/basicsyntax/common" />
@@ -98,7 +98,25 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestChannel in basicsyntax/overview">
+  <component name="RunManager" selected="Go Build.go build checksomething/mysql">
+    <configuration name="go build channel" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="SimpleGo" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="channel" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/src/channel/channel.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build checksomething/mysql" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="SimpleGo" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="checksomething/mysql" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/src/checksomething/mysql/optIndex.go" />
+      <method v="2" />
+    </configuration>
     <configuration name="TestChannel in basicsyntax/overview" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="SimpleGo" />
       <working_directory value="$PROJECT_DIR$/src/basicsyntax/overview" />
@@ -132,42 +150,20 @@
       <pattern value="^\QTestInterface\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestMethod in basicsyntax/overview" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="SimpleGo" />
-      <working_directory value="$PROJECT_DIR$/src/basicsyntax/overview" />
-      <kind value="PACKAGE" />
-      <package value="basicsyntax/overview" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestMethod\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestPointer in basicsyntax/overview" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="SimpleGo" />
-      <working_directory value="$PROJECT_DIR$/src/basicsyntax/overview" />
-      <kind value="PACKAGE" />
-      <package value="basicsyntax/overview" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestPointer\E$" />
-      <method v="2" />
-    </configuration>
     <list>
+      <item itemvalue="Go Build.go build checksomething/mysql" />
+      <item itemvalue="Go Build.go build channel" />
       <item itemvalue="Go Test.TestChannel in basicsyntax/overview" />
       <item itemvalue="Go Test.TestConcurrency in basicsyntax/overview" />
       <item itemvalue="Go Test.TestInterface in basicsyntax/overview" />
-      <item itemvalue="Go Test.TestMethod in basicsyntax/overview" />
-      <item itemvalue="Go Test.TestPointer in basicsyntax/overview" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build checksomething/mysql" />
+        <item itemvalue="Go Build.go build channel" />
         <item itemvalue="Go Test.TestChannel in basicsyntax/overview" />
         <item itemvalue="Go Test.TestConcurrency in basicsyntax/overview" />
         <item itemvalue="Go Test.TestInterface in basicsyntax/overview" />
-        <item itemvalue="Go Test.TestMethod in basicsyntax/overview" />
-        <item itemvalue="Go Test.TestPointer in basicsyntax/overview" />
       </list>
     </recent_temporary>
   </component>
@@ -285,16 +281,6 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$USER_HOME$/libs/go1.20.6/src/runtime/chan.go</url>
-          <line>192</line>
-          <option name="timeStamp" value="75" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$USER_HOME$/libs/go1.20.6/src/runtime/chan.go</url>
-          <line>72</line>
-          <option name="timeStamp" value="76" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$USER_HOME$/libs/go1.20.6/src/runtime/chan.go</url>
           <line>64</line>
           <option name="timeStamp" value="77" />
         </line-breakpoint>
@@ -304,9 +290,19 @@
           <option name="timeStamp" value="79" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/src/basicsyntax/common/channel.go</url>
-          <line>31</line>
-          <option name="timeStamp" value="80" />
+          <url>file://$PROJECT_DIR$/src/checksomething/mysql/optIndex.go</url>
+          <line>296</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/src/checksomething/mysql/optIndex.go</url>
+          <line>343</line>
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/src/checksomething/mysql/optIndex.go</url>
+          <line>306</line>
+          <option name="timeStamp" value="86" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
