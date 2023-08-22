@@ -11,8 +11,6 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 )
 
-var MysqlTimeParse = "Local"
-
 type DBConfig struct {
 	DbName   string //数据库名称
 	DBType   string //数据库类型
@@ -66,178 +64,11 @@ func loadDBConfig() *DBConfig {
 	return cfg
 }
 
-func insertDataV3(db *sql.DB, ch chan int) {
-	// 插入的数据量
-	totalRows := 8000000 - 1699176
-
-	// 构建插入语句
-	insertQuery := "INSERT INTO pt (data, next_at, update_at, created_at, deleted, invalid) VALUES (?, ?, ?, ?, ?, ?)"
-
-	// 准备插入语句
-	stmt, err := db.Prepare(insertQuery)
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer stmt.Close()
-
-	// 开始事务
-	tx, err := db.Begin()
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer tx.Rollback()
-
-	// 批量插入数据
-	batchSize := 100000 // 每批插入的数量
-
-	for i := 1; i <= totalRows; i += batchSize {
-		wg := sync.WaitGroup{}
-		batchData := make([]interface{}, 0, batchSize*6) // 预先分配空间
-		for j := i; j < i+batchSize && j <= totalRows; j++ {
-			wg.Add(1)
-
-			go func(j int) {
-				defer wg.Done()
-				var del, inva bool
-				if j%2 == 0 {
-					del = true
-					inva = false
-				} else {
-					del = false
-					inva = true
-				}
-
-				tasnextAt := time.Now().Unix() + int64(j)
-				data := fmt.Sprintf("data index %d", j) // 根据实际需求生成数据
-				nextAt := tasnextAt                     // 根据实际需求生成数据
-				updateAt := time.Now().Unix()           // 根据实际需求生成数据
-				createdAt := time.Now().Unix()          // 根据实际需求生成数据
-				deleted := del                          // 根据实际需求生成数据
-				invalid := inva                         // 根据实际需求生成数据
-
-				// 将每组数据作为一个整体添加到 batchData 中
-				rowData := []interface{}{data, nextAt, updateAt, createdAt, deleted, invalid}
-				batchData = append(batchData, rowData)
-
-			}(j)
-		}
-
-		// 执行插入语句
-		for _, rowData := range batchData {
-			rowData, ok := rowData.([]interface{})
-			if !ok {
-				log.Fatal("rowData 类型断言失败")
-			}
-			_, err = stmt.Exec(rowData...)
-			if err != nil {
-				log.Fatal(err)
-			}
-		}
-		wg.Wait()
-	}
-
-	// 提交事务
-	err = tx.Commit()
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	fmt.Println("插入数据完成")
-}
-
-var totalRows = 8000000
-
-var chMaxCon chan int
-var chBatchData chan []interface{}
-
-func init() {
-	chMaxCon = make(chan int, 256)
-	chBatchData = make(chan []interface{}, 256)
-}
-
-// totalRows = 8000000 - 4145125
-func insertDataV4(db *sql.DB, ch chan int) {
-	var count int
-	// 构建插入语句
-	insertQuery := "INSERT INTO pt (data, next_at, update_at, created_at, deleted, invalid) VALUES (?, ?, ?, ?, ?, ?)"
-
-	// 准备插入语句
-	stmt, err := db.Prepare(insertQuery)
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	defer func() {
-		stmt.Close()
-	}()
-
-	for k := 0; k < 250; k++ {
-		/*  生成数据 */
-		chMaxCon <- 100000 // 每批插入的数量 4197769 4226082 4235453-4247749
-		go genData()
-
-		//  插入数据
-		go func() {
-			batchData := <-chBatchData
-			if batchData != nil {
-				for _, rowData := range batchData {
-					rowData, ok := rowData.([]interface{})
-					if !ok {
-						log.Fatal("rowData 类型断言失败")
-					}
-					_, err = stmt.Exec(rowData...)
-					if err != nil {
-						log.Fatal(err)
-					}
-					count++
-				}
-			}
-		}()
-		fmt.Println("count", count)
-	}
-
-	fmt.Println("插入数据完成")
-}
-
-// batchSize := 100000 // 每批插入的数量
-func genData() {
-	var batchSize int
-	batchSize = <-chMaxCon
-	batchData := make([]interface{}, 0, batchSize*6) // 预先分配空间
-
-	for j := 1; j < batchSize; j++ {
-		var del, inva bool
-		if j%2 == 0 {
-			del = true
-			inva = false
-		} else {
-			del = false
-			inva = true
-		}
-
-		tasnextAt := time.Now().Unix() + int64(j)
-		data := fmt.Sprintf("data index %d", j) // 根据实际需求生成数据
-		nextAt := tasnextAt                     // 根据实际需求生成数据
-		updateAt := time.Now().Unix()           // 根据实际需求生成数据
-		createdAt := time.Now().Unix()          // 根据实际需求生成数据
-		deleted := del                          // 根据实际需求生成数据
-		invalid := inva                         // 根据实际需求生成数据
-
-		rowData := []interface{}{data, nextAt, updateAt, createdAt, deleted, invalid}
-		batchData = append(batchData, rowData)
-	}
-
-	fmt.Println("生成数据成功<-chMaxCon:", <-chMaxCon)
-	chBatchData <- batchData
-}
-
 func main() {
 	// 连接到数据库
 	dbCfg := loadDBConfig()
 	option := dbCfg.ToOpition("charset", "interpolateParams", "allowNativePasswords")
-	if MysqlTimeParse != "" {
-		option = fmt.Sprintf("%s&parseTime=true&loc=%s", option, MysqlTimeParse)
-	}
+
 	dataSourceName := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?%s", dbCfg.DbUser, dbCfg.DbPswd, dbCfg.DbHost, dbCfg.DbPort, dbCfg.DbName, option)
 	mysql, err := sql.Open("mysql", dataSourceName)
 
@@ -255,26 +86,48 @@ func main() {
 	mysql.SetMaxIdleConns(100)
 	mysql.SetConnMaxLifetime(time.Second * 30)
 
-	insertDataV5(mysql, 10000)
-	//log.Fatal("数据库注册success")
+	_, err = fmt.Println("数据库注册success")
 
-	for {
-		select {
+	// 插入数据
+	{
+		start := time.Now().Unix()
+		var batchSize = 10000
+		var control = 10
 
-		default:
-			fmt.Println("111")
-		}
+		// 重置index： 每次插入的时候需要做修改
+		incr = 1010086
+
+		fmt.Printf("插入%d条数据，总共用时：%d s\n", batchSize*control, insertDataV5(mysql, batchSize, control)-start)
 	}
+
+	// todo 查询接口有问题
+	/*
+		创建索引1
+			ALTER TABLE `pt` ADD INDEX `idx_query` (`next_at`, `deleted`, `invalid`)
+	*/
+	//createIndex(mysql, "ALTER TABLE pt ADD INDEX idx_query (next_at, deleted, invalid)")
+
+	// 数据查找
+	findData(mysql)
+
+	/* 索引优化
+	创建索引2:
+		ALTER TABLE `pt` ADD INDEX `idx_query` (`deleted`, `invalid`, `next_at`)
+	*/
+	// createIndex(mysql, "ALTER TABLE pt ADD INDEX idx_query1 (next_at, deleted, invalid)")
+	// findData(mysql,"EXPLAIN SELECT id FROM pt WHERE next_at <= 1514822400 AND deleted=0 AND invalid=0")
 
 }
 
 var chIn chan bool
+var incr int
 
 func init() {
 	chIn = make(chan bool, 10)
+	incr = 10086
 }
 
-func insertDataV5(db *sql.DB, batchSize int) {
+func insertDataV5(db *sql.DB, batchSize int, control int) int64 {
 	var totalCount int
 
 	insertQuery := "INSERT INTO pt (data, next_at, update_at, created_at, deleted, invalid) VALUES (?, ?, ?, ?, ?, ?)"
@@ -284,18 +137,23 @@ func insertDataV5(db *sql.DB, batchSize int) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	defer stmt.Close()
+	defer func() {
+		fmt.Println(stmt.Close())
+	}()
 
-	for k := 0; k < 250; k++ {
+	var wg sync.WaitGroup
+	for k := 0; k < control; k++ {
 		// 生成数据
 
 		batchData := genDataV2(batchSize)
-
 		fmt.Println("batchData info lent:", len(batchData))
 
 		// 执行批量插入操作
 		if <-chIn {
+			wg.Add(1)
 			go func(data []interface{}) {
+				defer wg.Done()
+
 				for _, rowData := range data {
 					rowData, ok := rowData.([]interface{})
 					fmt.Println("rowData info :", rowData)
@@ -310,13 +168,12 @@ func insertDataV5(db *sql.DB, batchSize int) {
 					totalCount += count
 				}
 			}(batchData)
-		} else {
-			fmt.Println("no data")
 		}
-
+		wg.Wait()
 	}
 
 	fmt.Println("插入数据完成，总计插入", totalCount, "条数据")
+	return time.Now().Unix()
 }
 
 func genDataV2(batchSize int) []interface{} {
@@ -331,10 +188,10 @@ func genDataV2(batchSize int) []interface{} {
 			deleted = false
 			invalid = true
 		}
-
-		tasnextAt := time.Now().Unix() + int64(j)
+		incr++
+		//tasnextAt := time.Now().Unix() + int64(j)
 		data := fmt.Sprintf("data index %d", j)
-		nextAt := tasnextAt
+		nextAt := int64(incr)
 		updateAt := time.Now().Unix()
 		createdAt := time.Now().Unix()
 		rowData := []interface{}{data, nextAt, updateAt, createdAt, deleted, invalid}
@@ -344,3 +201,208 @@ func genDataV2(batchSize int) []interface{} {
 	chIn <- true
 	return batchData
 }
+
+// 创建索引："ALTER TABLE pt ADD INDEX idx_query (next_at, deleted, invalid)"
+func createIndex(db *sql.DB, sql_str string) {
+	// 执行ALTER TABLE命令
+	_, err := db.Exec(sql_str)
+	if err != nil {
+		fmt.Println("ALTER TABLE命令执行失败：", err.Error())
+		return
+	}
+
+	fmt.Println("ALTER TABLE命令执行成功")
+}
+
+//  查询
+
+func findData1(db *sql.DB) {
+
+	// 执行查询并解释执行计划
+	rows, err := db.Query("EXPLAIN SELECT id FROM pt WHERE next_at >= 1692721116 AND deleted=1 AND invalid=0")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer rows.Close()
+
+	// 打印解释执行计划结果
+	var (
+		id int
+	)
+	for rows.Next() {
+		err := rows.Scan(&id)
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		fmt.Printf("id: %d\n", id)
+	}
+
+	if err := rows.Err(); err != nil {
+		log.Fatal(err)
+	}
+}
+
+func findData(db *sql.DB) {
+	query := "SELECT * FROM bxch"
+
+	rows, err := db.Query(query)
+	if err != nil {
+		fmt.Println("Error executing query:", err)
+		return
+	}
+	defer rows.Close()
+
+	for rows.Next() {
+		// process rows
+	}
+
+	if err := rows.Err(); err != nil {
+		fmt.Println("Error iterating rows:", err)
+	}
+
+	// Explain query execution plan
+	explainQuery := "EXPLAIN FORMAT=json " + query
+	explainRows, err := db.Query(explainQuery)
+	if err != nil {
+		fmt.Println("Error getting query execution plan:", err)
+		return
+	}
+	defer explainRows.Close()
+
+	for explainRows.Next() {
+		// process explain rows
+	}
+
+	if err := explainRows.Err(); err != nil {
+		fmt.Println("Error iterating explain rows:", err)
+	}
+
+}
+
+/*
+
+表数据：1110086条
++-------+------------+-------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| Table | Non_unique | Key_name    | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment | Visible | Expression |
++-------+------------+-------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| pt    |          0 | PRIMARY     |            1 | id          | A         |     4285914 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
+| pt    |          1 | idx_next_at |            1 | next_at     | A         |     2347438 |     NULL |   NULL | YES  | BTREE      |         |               | YES     | NULL       |
+| pt    |          1 | Uindex_1    |            1 | next_at     | A         |     2407392 |     NULL |   NULL | YES  | BTREE      |         |               | YES     | NULL       |
+| pt    |          1 | Uindex_1    |            2 | deleted     | A         |     2928384 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
+| pt    |          1 | Uindex_1    |            3 | invalid     | A         |     2820960 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
++-------+------------+-------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+5 rows in set (0.01 sec)
+
+索引数据：
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| id         | int unsigned | NO   | PRI | NULL    | auto_increment |
+| data       | longtext     | YES  |     | NULL    |                |
+| next_at    | bigint       | YES  | MUL | NULL    |                |
+| update_at  | int          | NO   |     | NULL    |                |
+| created_at | int          | NO   |     | NULL    |                |
+| deleted    | tinyint(1)   | NO   |     | 0       |                |
+| invalid    | tinyint(1)   | NO   |     | 0       |                |
++------------+--------------+------+-----+---------+----------------+
+
+*/
+
+/*
+rowData info : [data index 10000 1110086 1692718483 1692718483 true false]
+
+利用联合索引 Uindex_1
+	ALTER TABLE `pt` ADD INDEX `Uindex_1` (`next_at`, `deleted`, `invalid`);
+
+	mysql> EXPLAIN SELECT id FROM pt WHERE next_at <= 555043 AND deleted = 1 AND invalid = 0;
+	+----+-------------+-------+------------+-------+---------------+----------+---------+------+--------+----------+--------------------------+
+	| id | select_type | table | partitions | type  | possible_keys | key      | key_len | ref  | rows   | filtered | Extra                    |
+	+----+-------------+-------+------------+-------+---------------+----------+---------+------+--------+----------+--------------------------+
+	|  1 | SIMPLE      | pt    | NULL       | range | Uindex_1      | Uindex_1 | 11      | NULL | 524635 |     1.00 | Using where; Using index |
+	+----+-------------+-------+------------+-------+---------------+----------+---------+------+--------+----------+--------------------------+
+	1 row in set, 1 warning (0.00 sec)
+
+
+对整个表进行对半查询，555043，查询了524635条
+	mysql> EXPLAIN SELECT id FROM pt WHERE next_at <= 555043 AND deleted = 1 AND invalid = 0;
+	+----+-------------+-------+------------+-------+-------------------+----------+---------+------+--------+----------+--------------------------+
+	| id | select_type | table | partitions | type  | possible_keys     | key      | key_len | ref  | rows   | filtered | Extra                    |
+	+----+-------------+-------+------------+-------+-------------------+----------+---------+------+--------+----------+--------------------------+
+	|  1 | SIMPLE      | pt    | NULL       | range | Uindex_1,Uindex_2 | Uindex_1 | 11      | NULL | 524635 |    10.00 | Using where; Using index |
+	+----+-------------+-------+------------+-------+-------------------+----------+---------+------+--------+----------+--------------------------+
+	1 row in set, 1 warning (0.01 sec)
+
+	mysql> EXPLAIN SELECT id FROM pt WHERE next_at <= 110087 AND deleted = 1 AND invalid = 0;
+	+----+-------------+-------+------------+-------+---------------+----------+---------+------+--------+----------+--------------------------+
+	| id | select_type | table | partitions | type  | possible_keys | key      | key_len | ref  | rows   | filtered | Extra                    |
+	+----+-------------+-------+------------+-------+---------------+----------+---------+------+--------+----------+--------------------------+
+	|  1 | SIMPLE      | pt    | NULL       | range | Uindex_1      | Uindex_1 | 11      | NULL | 236296 |     1.00 | Using where; Using index |
+	+----+-------------+-------+------------+-------+---------------+----------+---------+------+--------+----------+--------------------------+
+
+查询语句对效率的影响
+	EXPLAIN SELECT id FROM pt WHERE deleted = 1 AND invalid = 0 AND next_at <= 555043;  ===== 555043;
+	EXPLAIN SELECT id FROM pt WHERE next_at <= 110087 AND deleted = 1 AND invalid = 0;  ===== 236296
+	EXPLAIN SELECT id FROM pt WHERE next_at <= 110087 AND invalid = 0 AND deleted = 1;  ===== 236296
+	EXPLAIN SELECT id FROM pt WHERE deleted = 1 AND next_at <= 555043 AND invalid = 0;  ===== 524635
+
+
+*/
+
+/*
+	index 优化
+
+	----ALTER TABLE `pt` ADD INDEX `Uindex_2` ( `deleted`, `invalid`，`next_at`);
+	----空格报错	// ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to
+	----your MySQL server version for the right syntax to use near '，`next_at`)' at line 1
+
+创建新的联合索引
+	ALTER TABLE `pt` ADD INDEX `Uindex_2` (`deleted`, `invalid`, `next_at`);
+
+
+	mysql> EXPLAIN SELECT id FROM pt WHERE next_at = 1110086 AND deleted = 1 AND invalid = 0;
+	+----+-------------+-------+------------+------+---------------+----------+---------+-------------------+------+----------+-------------+
+	| id | select_type | table | partitions | type | possible_keys | key      | key_len | ref               | rows | filtered | Extra       |
+	+----+-------------+-------+------------+------+---------------+----------+---------+-------------------+------+----------+-------------+
+	|  1 | SIMPLE      | pt    | NULL       | ref  | Uindex_2      | Uindex_2 | 11      | const,const,const |    1 |   100.00 | Using index |
+	+----+-------------+-------+------------+------+---------------+----------+---------+-------------------+------+----------+-------------+
+
+
+	mysql> EXPLAIN SELECT id FROM pt WHERE next_at <= 110087 AND deleted = 1 AND invalid = 0;
+	+----+-------------+-------+------------+-------+---------------+----------+---------+------+--------+----------+--------------------------+
+	| id | select_type | table | partitions | type  | possible_keys | key      | key_len | ref  | rows   | filtered | Extra                    |
+	+----+-------------+-------+------------+-------+---------------+----------+---------+------+--------+----------+--------------------------+
+	|  1 | SIMPLE      | pt    | NULL       | range | Uindex_2      | Uindex_2 | 11      | NULL | 103210 |   100.00 | Using where; Using index |
+	+----+-------------+-------+------------+-------+---------------+----------+---------+------+--------+----------+--------------------------+
+
+
+*/
+
+/*
+	对比：
+
+
+	mysql> EXPLAIN SELECT id FROM pt WHERE next_at <= 110087 AND deleted = 1 AND invalid = 0;
+	+----+-------------+-------+------------+-------+---------------+----------+---------+------+--------+----------+--------------------------+
+	| id | select_type | table | partitions | type  | possible_keys | key      | key_len | ref  | rows   | filtered | Extra                    |
+	+----+-------------+-------+------------+-------+---------------+----------+---------+------+--------+----------+--------------------------+
+	|  1 | SIMPLE      | pt    | NULL       | range | Uindex_2      | Uindex_2 | 11      | NULL | 103210 |   100.00 | Using where; Using index |
+	+----+-------------+-------+------------+-------+---------------+----------+---------+------+--------+----------+--------------------------+
+
+
+
+	mysql> EXPLAIN SELECT id FROM pt WHERE next_at <= 110087 AND deleted = 1 AND invalid = 0;
+	+----+-------------+-------+------------+-------+---------------+----------+---------+------+--------+----------+--------------------------+
+	| id | select_type | table | partitions | type  | possible_keys | key      | key_len | ref  | rows   | filtered | Extra                    |
+	+----+-------------+-------+------------+-------+---------------+----------+---------+------+--------+----------+--------------------------+
+	|  1 | SIMPLE      | pt    | NULL       | range | Uindex_1      | Uindex_1 | 11      | NULL | 236296 |     1.00 | Using where; Using index |
+	+----+-------------+-------+------------+-------+---------------+----------+---------+------+--------+----------+--------------------------+
+
+
+	Uindex_1：236296
+	Uindex_2：103210
+	优化后的Uindex_2 查询效率确实是比Uindex_1效率要高
+
+
+
+*/

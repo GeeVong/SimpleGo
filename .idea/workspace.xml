@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47fd955d-cfd1-41ac-85fa-84f9d7c84376" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/checksomething/mysql/optIndex.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/datarace/datarace_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/channel/channel.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/channel/channel.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checksomething/mysql/optIndex.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/checksomething/mysql/optIndex.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +33,7 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/checksomething/mysql/optIndex.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/libs/go1.20.6/src/builtin/builtin.go" root0="SKIP_INSPECTION" />
     <setting file="file://$USER_HOME$/libs/go1.20.6/src/internal/testlog/log.go" root0="SKIP_INSPECTION" />
     <setting file="file://$USER_HOME$/libs/go1.20.6/src/os/file.go" root0="SKIP_INSPECTION" />
@@ -291,17 +290,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/src/checksomething/mysql/optIndex.go</url>
-          <line>296</line>
+          <line>151</line>
           <option name="timeStamp" value="84" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/src/checksomething/mysql/optIndex.go</url>
-          <line>343</line>
+          <line>200</line>
           <option name="timeStamp" value="85" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/src/checksomething/mysql/optIndex.go</url>
-          <line>306</line>
+          <line>164</line>
           <option name="timeStamp" value="86" />
         </line-breakpoint>
       </breakpoints>
