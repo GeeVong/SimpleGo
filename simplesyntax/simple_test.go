@@ -1,9 +1,9 @@
-package main
+package simplesyntax
 
 import (
-	"basicsyntax/common"
-	"basicsyntax/common/pb"
 	"fmt"
+	"github.com/GeeVong/SimpleGo/common"
+	"github.com/GeeVong/SimpleGo/common/pb"
 	"github.com/golang/protobuf/proto"
 	"math/cmplx"
 	"os"

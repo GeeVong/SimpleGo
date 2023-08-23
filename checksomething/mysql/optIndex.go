@@ -398,11 +398,47 @@ rowData info : [data index 10000 1110086 1692718483 1692718483 true false]
 	|  1 | SIMPLE      | pt    | NULL       | range | Uindex_1      | Uindex_1 | 11      | NULL | 236296 |     1.00 | Using where; Using index |
 	+----+-------------+-------+------------+-------+---------------+----------+---------+------+--------+----------+--------------------------+
 
+*/
+
+/*
+原因
+
+	filtered：列表示从查询结果集中通过WHERE条件进行过滤的比例。它的值介于0和1之间，0表示没有行满足WHERE条件，1表示所有行都满足WHERE条件。在你给出的查询计划中，
+	filtered的值为2.25，这可能是因为优化器估计的统计信息导致了一个大于1的值。一般来说，较低的filtered值表示查询条件过滤得更彻底，较高的filtered值表示查询条件过滤得不够彻底。
+
+	查询的条件和索引创建的顺序是相关的
+		当创建(a,b,c)复合索引时，想要索引生效的话，只能使用 a和ab、ac和abc三种组合！
+		ALTER TABLE `pt` ADD INDEX `Uindex_1` (`next_at`, `deleted`, `invalid`);
+	最左前缀匹配：
+
+
+		a:EXPLAIN SELECT * FROM pt WHERE next_at = 110087;  // 隐式转换：EXPLAIN SELECT * FROM pt WHERE next_at = "110087"; EXPLAIN SELECT * FROM pt WHERE next_at = '110087';
+		ab:EXPLAIN SELECT * FROM pt WHERE next_at = 110087 AND deleted = 1;
+		abc:EXPLAIN SELECT * FROM pt WHERE next_at = 110087 AND deleted = 1 AND invalid = 0;
+		ac:EXPLAIN SELECT * FROM pt WHERE next_at = 110087 AND invalid = 0;
+		ba<mysql查询优化器>:EXPLAIN SELECT * FROM pt WHERE deleted = 1 AND next_at = 110087;
+
+		EXPLAIN SELECT * FROM pt WHERE  deleted = 1 AND invalid = 0;
+
+
+
+
+	范围查找：
+		EXPLAIN SELECT * FROM pt WHERE next_at <= 110087;
+		EXPLAIN SELECT * FROM pt WHERE next_at <= 110087 AND deleted = 1;
+		EXPLAIN SELECT * FROM pt WHERE next_at <= 110087 AND deleted = 1 AND invalid = 0;
+	全值匹配：
+
+
+
+
 
 	Uindex_1：236296
 	Uindex_2：103210
 	优化后的Uindex_2 查询效率确实是比Uindex_1效率要高
 
-
+	EXPLAIN SELECT * FROM pt WHERE next_at = 1110086 AND deleted = 1 AND invalid = 0;
+	SELECT * FROM pt WHERE next_at = 1110086 AND deleted = 1 AND invalid = 0;
+	EXPLAIN SELECT * FROM pt WHERE next_at <= 110087;
 
 */
