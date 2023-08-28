@@ -38,15 +38,11 @@ func TestLogColor(t *testing.T) {
 
 }
 
+// 控制台输出带颜色
 func TestZeroLogConsoleWriter(t *testing.T) {
 	beautifulLogger := log.Output(zerolog.ConsoleWriter{Out: os.Stderr})
 	_, file, line, _ := runtime.Caller(0)
 	beautifulLogger.Info().Str("file", file).Str("line", strconv.Itoa(line)).Msg("str")
 	time.Sleep(1)
-	beautifulLogger.Warn().Str("file", file).Str("line", strconv.Itoa(line)).Msg("str")
-}
-
-func TestZeroLogColor(t *testing.T) {
-	
-	LogInfo("color")
+	beautifulLogger.Error().Str("file", file).Str("line", strconv.Itoa(line)).Msg("str")
 }

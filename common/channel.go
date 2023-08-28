@@ -33,19 +33,21 @@ import (
 func NoBufferChan() {
 	ch := make(chan int64) // 创建一个无缓冲通道
 	go func() {
-		log.LogInfo("====222111")
+		log.LogInfo("service simple syntax", "testing no buffer chan")
 		val, ok := <-ch // 接收数据，接收方会被阻塞，由于数据还没接收到，
 		// 直到发送方发送数据
 		if !ok {
-			log.LogInfo("数据发送失败")
+			log.LogError("service simple syntax", "数据发送失败")
 		} else {
-			log.LogInfo("接收到数据:" + strconv.FormatInt(val, 10))
+			log.LogInfo("service simple syntax", "接收到数据:"+strconv.FormatInt(val, 10))
 		}
 	}()
 
-	fmt.Println("====111")
+	log.LogError("service simple syntax", "====111")
 	ch <- 10 // 发送数据，发送方会被阻塞直到接收方接收数据
-	fmt.Println("数据发送成功")
+	log.LogDebug("service simple syntax", "data seed success ")
+	n := 5 + 5
+	log.LogWarn("service simple syntax", "计算%d+%d=%d", 5, 5, n)
 
 }
 

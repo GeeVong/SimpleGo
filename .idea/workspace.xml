@@ -5,18 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47fd955d-cfd1-41ac-85fa-84f9d7c84376" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/checksomething/httpserver/httpserver.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/init.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/log.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/log_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/main/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checksomething/mysql/optIndex.go" beforeDir="false" afterPath="$PROJECT_DIR$/checksomething/mysql/optIndex.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/channel.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/channel.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/stringopt_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/stringopt_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/log/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/log/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/init.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/log/log.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/log_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/log/log_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/run_log/2023-08-26.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/run_log/2023-08-27.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/zerolog" beforeDir="false" afterPath="$PROJECT_DIR$/log/zerolog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/zerolog/console.go" beforeDir="false" afterPath="$PROJECT_DIR$/log/zerolog/console.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_log/2023-08-26.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_log/2023-08-27.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simplesyntax/run_log/2023-08-26.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/simplesyntax/simple_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/simplesyntax/simple_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +38,7 @@
   </component>
   <component name="GOROOT" url="file://$USER_HOME$/libs/go1.20.6" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/log/zerolog" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GoLibraries">
     <option name="useGoPathFromSystemEnvironment" value="false" />
@@ -104,14 +109,14 @@
       <recent name="$PROJECT_DIR$/src/basicsyntax" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestLogColor in github.com/GeeVong/SimpleGo/log">
-    <configuration name="go build github.com/GeeVong/SimpleGo/log/test" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.TestChannel in github.com/GeeVong/SimpleGo/simplesyntax">
+    <configuration name="go build github.com/GeeVong/SimpleGo/log/main" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="SimpleGo" />
-      <working_directory value="$PROJECT_DIR$" />
+      <working_directory value="$PROJECT_DIR$/log" />
       <kind value="PACKAGE" />
-      <package value="github.com/GeeVong/SimpleGo/log/test" />
+      <package value="github.com/GeeVong/SimpleGo/log/main" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/log/test/test.go" />
+      <filePath value="$PROJECT_DIR$/log/main/main.go" />
       <method v="2" />
     </configuration>
     <configuration name="TestChannel in github.com/GeeVong/SimpleGo/simplesyntax" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -126,17 +131,6 @@
       <pattern value="^\QTestChannel\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestConsoleWriter/Unix_timestamp_ms_input_format in github.com/rs/zerolog" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="SimpleGo" />
-      <working_directory value="$PROJECT_DIR$/log/zerolog" />
-      <kind value="PACKAGE" />
-      <package value="github.com/rs/zerolog" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestConsoleWriter\E$/^\QUnix_timestamp_ms_input_format\E$" />
-      <method v="2" />
-    </configuration>
     <configuration name="TestLogColor in github.com/GeeVong/SimpleGo/log" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="SimpleGo" />
       <working_directory value="$PROJECT_DIR$/log" />
@@ -149,32 +143,41 @@
       <pattern value="^\QTestLogColor\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestNewWriter in github.com/rs/zerolog/diode" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestZeroLogColor in github.com/GeeVong/SimpleGo/log" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="SimpleGo" />
-      <working_directory value="$PROJECT_DIR$/log/zerolog/diode" />
-      <root_directory value="$PROJECT_DIR$/log/zerolog" />
+      <working_directory value="$PROJECT_DIR$/log" />
       <kind value="PACKAGE" />
-      <package value="github.com/rs/zerolog/diode" />
+      <package value="github.com/GeeVong/SimpleGo/log" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestNewWriter\E$" />
+      <pattern value="^\QTestZeroLogColor\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestZeroLogConsoleWriter in github.com/GeeVong/SimpleGo/log" type="GoTestRunConfiguration" factoryName="Go Test" nameIsGenerated="true">
+      <module name="SimpleGo" />
+      <working_directory value="$PROJECT_DIR$/log" />
+      <kind value="PACKAGE" />
+      <package value="github.com/GeeVong/SimpleGo/log" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestZeroLogConsoleWriter\E$" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Build.go build github.com/GeeVong/SimpleGo/log/test" />
-      <item itemvalue="Go Test.TestConsoleWriter/Unix_timestamp_ms_input_format in github.com/rs/zerolog" />
+      <item itemvalue="Go Build.go build github.com/GeeVong/SimpleGo/log/main" />
+      <item itemvalue="Go Test.TestZeroLogConsoleWriter in github.com/GeeVong/SimpleGo/log" />
+      <item itemvalue="Go Test.TestZeroLogColor in github.com/GeeVong/SimpleGo/log" />
       <item itemvalue="Go Test.TestLogColor in github.com/GeeVong/SimpleGo/log" />
-      <item itemvalue="Go Test.TestNewWriter in github.com/rs/zerolog/diode" />
       <item itemvalue="Go Test.TestChannel in github.com/GeeVong/SimpleGo/simplesyntax" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestLogColor in github.com/GeeVong/SimpleGo/log" />
-        <item itemvalue="Go Build.go build github.com/GeeVong/SimpleGo/log/test" />
-        <item itemvalue="Go Test.TestConsoleWriter/Unix_timestamp_ms_input_format in github.com/rs/zerolog" />
-        <item itemvalue="Go Test.TestNewWriter in github.com/rs/zerolog/diode" />
         <item itemvalue="Go Test.TestChannel in github.com/GeeVong/SimpleGo/simplesyntax" />
+        <item itemvalue="Go Build.go build github.com/GeeVong/SimpleGo/log/main" />
+        <item itemvalue="Go Test.TestZeroLogColor in github.com/GeeVong/SimpleGo/log" />
+        <item itemvalue="Go Test.TestLogColor in github.com/GeeVong/SimpleGo/log" />
       </list>
     </recent_temporary>
   </component>
@@ -295,19 +298,9 @@
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/simplesyntax/simple_test.go</url>
-          <line>1226</line>
-          <option name="timeStamp" value="79" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/log/zerolog/console_test.go</url>
           <line>227</line>
           <option name="timeStamp" value="82" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/log/log.go</url>
-          <line>19</line>
-          <option name="timeStamp" value="86" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/log/zerolog/diode/diode_test.go</url>
@@ -315,29 +308,29 @@
           <option name="timeStamp" value="88" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/log/init.go</url>
-          <line>48</line>
-          <option name="timeStamp" value="89" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/log/zerolog/console.go</url>
-          <line>319</line>
+          <line>320</line>
           <option name="timeStamp" value="92" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/log/zerolog/console.go</url>
-          <line>384</line>
+          <line>385</line>
           <option name="timeStamp" value="93" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/log/zerolog/console.go</url>
-          <line>264</line>
+          <line>265</line>
           <option name="timeStamp" value="94" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/log/zerolog/console.go</url>
           <line>129</line>
           <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$USER_HOME$/libs/go1.20.6/src/bytes/buffer.go</url>
+          <line>249</line>
+          <option name="timeStamp" value="99" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
