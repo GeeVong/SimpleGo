@@ -214,8 +214,7 @@ func createIndex(db *sql.DB, sql_str string) {
 	fmt.Println("ALTER TABLE命令执行成功")
 }
 
-//  查询
-
+// 查询
 func findData1(db *sql.DB) {
 
 	// 执行查询并解释执行计划

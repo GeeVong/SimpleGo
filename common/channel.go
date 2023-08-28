@@ -2,8 +2,11 @@ package common
 
 import (
 	"fmt"
+	"github.com/GeeVong/SimpleGo/log"
+	"strconv"
 	"sync"
 	"time"
+	//"github.com/GeeVong/SimpleGo/common"
 )
 
 /*
@@ -30,13 +33,13 @@ import (
 func NoBufferChan() {
 	ch := make(chan int64) // 创建一个无缓冲通道
 	go func() {
-		fmt.Println("====222111")
+		log.LogInfo("====222111")
 		val, ok := <-ch // 接收数据，接收方会被阻塞，由于数据还没接收到，
 		// 直到发送方发送数据
 		if !ok {
-			fmt.Println("数据发送失败")
+			log.LogInfo("数据发送失败")
 		} else {
-			fmt.Println("接收到数据:", val)
+			log.LogInfo("接收到数据:" + strconv.FormatInt(val, 10))
 		}
 	}()
 

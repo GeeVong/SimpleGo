@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/GeeVong/SimpleGo/common"
 	"github.com/GeeVong/SimpleGo/common/pb"
+	"github.com/GeeVong/SimpleGo/log"
 	"github.com/golang/protobuf/proto"
 	"math/cmplx"
 	"os"
@@ -1222,6 +1223,7 @@ func TestChannel(t *testing.T) {
 	/*
 		no buffer channel
 	*/
+	log.InitZeroLogCfg()
 	common.NoBufferChan()
 }
 

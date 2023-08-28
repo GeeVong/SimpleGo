@@ -1,0 +1,12 @@
+{"level":"info","website":"xx","account":"1321","time":"2023-08-26 17:13:20","message":"开始登录..."}
+{"level":"info","website":"xx","account":"1321","time":"2023-08-26 17:13:57","message":"开始登录..."}
+{"level":"info","test":"LogConsole","time":"2023-08-26 17:13:57","message":"TestLog"}
+{"level":"info","website":"xx","account":"1321","23":"iiii","time":"2023-08-26 17:15:07","message":"开始登录..."}
+{"level":"info","test":"LogConsole","time":"2023-08-26 17:15:07","message":"TestLog"}
+{"level":"info","key":"value","time":"2023-08-26 17:19:06","message":"TestLog"}
+{"level":"info","key":"value","time":"2023-08-26 17:22:36","message":"TestLog"}
+{"level":"info","key":"value","time":"2023-08-26 17:35:20","message":"TestLog"}
+{"level":"info","key":"value","time":"2023-08-26 17:35:49","message":"TestLog"}
+{"level":"debug","key":"value","time":"2023-08-26 17:35:49","message":"TestLog"}
+{"level":"warn","key":"value","time":"2023-08-26 17:35:49","message":"TestLog"}
+{"level":"error","key":"value","time":"2023-08-26 17:35:49","message":"TestLog"}
