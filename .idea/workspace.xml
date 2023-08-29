@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="47fd955d-cfd1-41ac-85fa-84f9d7c84376" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/log/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/log_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/log/log_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/logcfg.go" beforeDir="false" afterPath="$PROJECT_DIR$/log/logcfg.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/zerolog" beforeDir="false" afterPath="$PROJECT_DIR$/log/zerolog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/zerolog/console.go" beforeDir="false" afterPath="$PROJECT_DIR$/log/zerolog/console.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simplesyntax/simple_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/simplesyntax/simple_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +70,7 @@
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "http.proxy"
+    "settings.editor.selected.configurable": "go.vgo"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -334,6 +330,11 @@
           <url>file://$USER_HOME$/libs/go1.20.6/src/bytes/buffer.go</url>
           <line>249</line>
           <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/db/gee-cache/day1-lru/geecache/lru/lru_test.go</url>
+          <line>15</line>
+          <option name="timeStamp" value="100" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

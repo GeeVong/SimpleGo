@@ -22,6 +22,10 @@ var Logger zerolog.Logger
 
 var once sync.Once
 
+func SetLogLevel(logLevel int) {
+	LogFlag = logLevel
+}
+
 // 初始化 zerolog
 func InitZeroLogCfg() {
 	once.Do(func() {
