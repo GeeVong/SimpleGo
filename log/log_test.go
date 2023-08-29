@@ -1,9 +1,7 @@
 package log
 
 import (
-	"errors"
 	"fmt"
-	"github.com/anqiansong/ketty/console"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
 
@@ -13,24 +11,6 @@ import (
 	"testing"
 	"time"
 )
-
-func TestLogDebug(t *testing.T) {
-	console.Info(`
-    {
-        "name":"Hello Ketty",
-        "description":"a color logger",
-        "author":"anqiansong",
-        "category":"console",
-        "github":"https://github.com/anqiansong/ketty",
-        "useage":[
-            "info",
-            "debug"
-        ]
-    }`)
-	console.Debug("Hello Ketty")
-	console.Warn("Hello Ketty")
-	console.Error(errors.New("error test"))
-}
 
 func TestLogColor(t *testing.T) {
 	fmt.Printf("\033[1;31;40m%s\033[0m\n", "Red.")

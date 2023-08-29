@@ -2,7 +2,6 @@ package log
 
 import (
 	"fmt"
-	"github.com/anqiansong/ketty/console"
 )
 
 /*
@@ -19,47 +18,22 @@ import (
 */
 
 func LogInfo(tag, str string, param ...any) {
-	switch LogPackage {
+	msg := fmt.Sprintf(str, param...)
+	Logger.Info().Caller(1).Str("[tag]", tag).Msg(msg)
 
-	case LogPackage_zerolog:
-		msg := fmt.Sprintf(str, param...)
-		Logger.Info().Caller(1).Str("[tag]", tag).Msg(msg)
-
-	case LogPackage_kettyconsole:
-		console.Info(str)
-	}
 }
 
 func LogError(tag, str string, param ...any) {
-	switch LogPackage {
-	case LogPackage_zerolog:
-		msg := fmt.Sprintf(str, param...)
-		Logger.Error().Caller(1).Str("[tag]", tag).Msg(msg)
-
-	case LogPackage_kettyconsole:
-		console.Info(str)
-
-	}
+	msg := fmt.Sprintf(str, param...)
+	Logger.Error().Caller(1).Str("[tag]", tag).Msg(msg)
 }
 
 func LogWarn(tag, str string, param ...any) {
-	switch LogPackage {
-	case LogPackage_kettyconsole:
-		console.Info(str)
-	case LogPackage_zerolog:
-
-		msg := fmt.Sprintf(str, param...)
-		Logger.Warn().Caller(1).Str("[tag]", tag).Msg(msg)
-	}
+	msg := fmt.Sprintf(str, param...)
+	Logger.Warn().Caller(1).Str("[tag]", tag).Msg(msg)
 }
 
 func LogDebug(tag, str string, param ...any) {
-	switch LogPackage {
-	case LogPackage_kettyconsole:
-		console.Info(str)
-	case LogPackage_zerolog:
-
-		msg := fmt.Sprintf(str, param...)
-		Logger.Debug().Caller(1).Str("[tag]", tag).Msg(msg)
-	}
+	msg := fmt.Sprintf(str, param...)
+	Logger.Debug().Caller(1).Str("[tag]", tag).Msg(msg)
 }

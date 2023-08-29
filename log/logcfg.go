@@ -10,14 +10,6 @@ import (
 )
 
 const (
-	LogPackage_type         = 0
-	LogPackage_kettyconsole = 1
-	LogPackage_zerolog      = 2
-)
-
-var LogPackage = LogPackage_zerolog
-
-const (
 	LogConsole        = 0
 	LogConsoleColor   = 1
 	LogFile           = 2

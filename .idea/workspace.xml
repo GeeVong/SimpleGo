@@ -5,23 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47fd955d-cfd1-41ac-85fa-84f9d7c84376" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/log/main/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/channel.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/channel.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/log/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/log/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/init.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/log/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/log/log.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/log_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/log/log_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/run_log/2023-08-26.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/run_log/2023-08-27.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/logcfg.go" beforeDir="false" afterPath="$PROJECT_DIR$/log/logcfg.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/zerolog" beforeDir="false" afterPath="$PROJECT_DIR$/log/zerolog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/zerolog/console.go" beforeDir="false" afterPath="$PROJECT_DIR$/log/zerolog/console.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_log/2023-08-26.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_log/2023-08-27.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simplesyntax/run_log/2023-08-26.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/simplesyntax/simple_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/simplesyntax/simple_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,34 +54,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
-    &quot;ToolWindowRun.ShowToolbar&quot;: &quot;false&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;configurable..is.expanded&quot;: &quot;false&quot;,
-    &quot;configurable.GoLibrariesConfigurable.is.expanded&quot;: &quot;true&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/hq&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.goide.configuration.GoLibrariesConfigurableProvider&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed": "true",
+    "ToolWindowRun.ShowToolbar": "false",
+    "WebServerToolWindowFactoryState": "false",
+    "configurable..is.expanded": "false",
+    "configurable.GoLibrariesConfigurable.is.expanded": "true",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "/Users/hq",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "http.proxy"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/checksomething/mysql" />
@@ -109,7 +98,7 @@
       <recent name="$PROJECT_DIR$/src/basicsyntax" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestChannel in github.com/GeeVong/SimpleGo/simplesyntax">
+  <component name="RunManager" selected="Go Test.TestGet in geecache/lru">
     <configuration name="go build github.com/GeeVong/SimpleGo/log/main" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="SimpleGo" />
       <working_directory value="$PROJECT_DIR$/log" />
@@ -129,6 +118,18 @@
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
       <pattern value="^\QTestChannel\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestGet in geecache/lru" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="SimpleGo" />
+      <working_directory value="$PROJECT_DIR$/db/gee-cache/day1-lru/geecache/lru" />
+      <root_directory value="$PROJECT_DIR$/db/gee-cache/day1-lru/geecache" />
+      <kind value="PACKAGE" />
+      <package value="geecache/lru" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestGet\E$" />
       <method v="2" />
     </configuration>
     <configuration name="TestLogColor in github.com/GeeVong/SimpleGo/log" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -168,12 +169,14 @@
     <list>
       <item itemvalue="Go Build.go build github.com/GeeVong/SimpleGo/log/main" />
       <item itemvalue="Go Test.TestZeroLogConsoleWriter in github.com/GeeVong/SimpleGo/log" />
+      <item itemvalue="Go Test.TestGet in geecache/lru" />
       <item itemvalue="Go Test.TestZeroLogColor in github.com/GeeVong/SimpleGo/log" />
       <item itemvalue="Go Test.TestLogColor in github.com/GeeVong/SimpleGo/log" />
       <item itemvalue="Go Test.TestChannel in github.com/GeeVong/SimpleGo/simplesyntax" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestGet in geecache/lru" />
         <item itemvalue="Go Test.TestChannel in github.com/GeeVong/SimpleGo/simplesyntax" />
         <item itemvalue="Go Build.go build github.com/GeeVong/SimpleGo/log/main" />
         <item itemvalue="Go Test.TestZeroLogColor in github.com/GeeVong/SimpleGo/log" />

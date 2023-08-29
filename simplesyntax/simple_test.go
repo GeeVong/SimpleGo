@@ -1225,10 +1225,6 @@ func TestChannel(t *testing.T) {
 	*/
 	log.InitZeroLogCfg()
 
-	/*
-		Aug 28 00:00:00.000000 | INFO  | ====222111 key:value;
-		Aug 28 00:00:00.000000 | INFO  | 接收到数据:10 key:value;
-	*/
 	common.NoBufferChan()
 }
 
