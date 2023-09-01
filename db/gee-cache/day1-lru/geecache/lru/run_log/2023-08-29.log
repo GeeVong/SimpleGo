@@ -1,0 +1,177 @@
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:26","[tag]":"lru TestGet","[TS]":"2023-08-29T10:07:24+08:00","[Msg]":"cache hit , value is 1234"}
+{"[Level]":"error","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:34","[tag]":"lru TestGet","[TS]":"2023-08-29T10:07:24+08:00","[Msg]":"miss key2"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:26","[tag]":"lru TestGet","[TS]":"2023-08-29T10:15:47+08:00","[Msg]":"cache hit , value is 1234"}
+{"[Level]":"error","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:34","[tag]":"lru TestGet","[TS]":"2023-08-29T10:15:47+08:00","[Msg]":"miss key2"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:26","[tag]":"lru TestGet","[TS]":"2023-08-29T10:16:06+08:00","[Msg]":"cache hit , value is 1234"}
+{"[Level]":"error","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:34","[tag]":"lru TestGet","[TS]":"2023-08-29T10:16:06+08:00","[Msg]":"miss key2"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:99","[tag]":"dataSize","[TS]":"2023-08-29T10:27:58+08:00","[Msg]":"value d's size 16"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:99","[tag]":"dataSize","[TS]":"2023-08-29T10:27:58+08:00","[Msg]":"value d's size 16"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:94","[tag]":"lru ll info","[TS]":"2023-08-29T10:27:58+08:00","[Msg]":"ll's element:{kk4,vv4} "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:94","[tag]":"lru ll info","[TS]":"2023-08-29T10:27:58+08:00","[Msg]":"ll's element:{kk3,vv3} "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:94","[tag]":"lru ll info","[TS]":"2023-08-29T10:27:58+08:00","[Msg]":"ll's element:{kk2,vv2} "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:94","[tag]":"lru ll info","[TS]":"2023-08-29T10:27:58+08:00","[Msg]":"ll's element:{kkey1,vv123456} "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:99","[tag]":"dataSize","[TS]":"2023-08-29T10:28:43+08:00","[Msg]":"value d's size 16"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:99","[tag]":"dataSize","[TS]":"2023-08-29T10:28:43+08:00","[Msg]":"value d's size 16"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:94","[tag]":"lru ll info","[TS]":"2023-08-29T10:28:43+08:00","[Msg]":"ll's element:{k4,v4} "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:94","[tag]":"lru ll info","[TS]":"2023-08-29T10:28:43+08:00","[Msg]":"ll's element:{k3,v3} "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:94","[tag]":"lru ll info","[TS]":"2023-08-29T10:28:43+08:00","[Msg]":"ll's element:{k2,v2} "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:94","[tag]":"lru ll info","[TS]":"2023-08-29T10:28:43+08:00","[Msg]":"ll's element:{key1,v123456} "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"dataSize","[TS]":"2023-08-29T10:40:10+08:00","[Msg]":"value d's size 16"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:99","[tag]":"lru ll info","[TS]":"2023-08-29T10:40:16+08:00","[Msg]":"c.nbytes:8 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:100","[tag]":"lru ll info","[TS]":"2023-08-29T10:40:16+08:00","[Msg]":"ll's element:{k2,v2} "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:99","[tag]":"lru ll info","[TS]":"2023-08-29T10:40:16+08:00","[Msg]":"c.nbytes:12 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:100","[tag]":"lru ll info","[TS]":"2023-08-29T10:40:16+08:00","[Msg]":"ll's element:{k3,v3} "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:63","[tag]":"TestOnEvicted","[TS]":"2023-08-29T10:44:48+08:00","[Msg]":"cap:11 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:97","[tag]":"lru ll info","[TS]":"2023-08-29T10:45:09+08:00","[Msg]":"c.nbytes:8 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:98","[tag]":"lru ll info","[TS]":"2023-08-29T10:45:09+08:00","[Msg]":"ll's element:{k2,v2} "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:97","[tag]":"lru ll info","[TS]":"2023-08-29T10:45:09+08:00","[Msg]":"c.nbytes:12 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:98","[tag]":"lru ll info","[TS]":"2023-08-29T10:45:09+08:00","[Msg]":"ll's element:{k3,v3} "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:63","[tag]":"TestOnEvicted","[TS]":"2023-08-29T10:45:10+08:00","[Msg]":"cap:11 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:97","[tag]":"lru ll info","[TS]":"2023-08-29T10:45:45+08:00","[Msg]":"c.nbytes:8 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:98","[tag]":"lru ll info","[TS]":"2023-08-29T10:45:53+08:00","[Msg]":"ll's element:{k2,v2} "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:97","[tag]":"lru ll info","[TS]":"2023-08-29T10:46:40+08:00","[Msg]":"c.nbytes:12 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:98","[tag]":"lru ll info","[TS]":"2023-08-29T10:46:40+08:00","[Msg]":"ll's element:{k3,v3} "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:63","[tag]":"TestOnEvicted","[TS]":"2023-08-29T10:46:41+08:00","[Msg]":"cap:11 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:68","[tag]":"TestOnEvicted","[TS]":"2023-08-29T10:46:44+08:00","[Msg]":"cap1:4 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:101","[tag]":"lru ll info","[TS]":"2023-08-29T10:46:44+08:00","[Msg]":"c.nbytes:8 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"lru ll info","[TS]":"2023-08-29T10:46:44+08:00","[Msg]":"ll's element:{k2,v2} "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:101","[tag]":"lru ll info","[TS]":"2023-08-29T10:47:12+08:00","[Msg]":"c.nbytes:12 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"lru ll info","[TS]":"2023-08-29T10:47:12+08:00","[Msg]":"ll's element:{k3,v3} "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:63","[tag]":"TestOnEvicted","[TS]":"2023-08-29T10:47:14+08:00","[Msg]":"cap:11 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:101","[tag]":"lru ll info","[TS]":"2023-08-29T10:47:14+08:00","[Msg]":"c.nbytes:22 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"lru ll info","[TS]":"2023-08-29T10:47:14+08:00","[Msg]":"ll's element:{key1,v123456} "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:68","[tag]":"TestOnEvicted","[TS]":"2023-08-29T10:47:14+08:00","[Msg]":"cap1:4 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:101","[tag]":"lru ll info","[TS]":"2023-08-29T10:47:14+08:00","[Msg]":"c.nbytes:30 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"lru ll info","[TS]":"2023-08-29T10:47:14+08:00","[Msg]":"ll's element:{k2,v2} "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:101","[tag]":"lru ll info","[TS]":"2023-08-29T10:47:14+08:00","[Msg]":"c.nbytes:41 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"lru ll info","[TS]":"2023-08-29T10:47:14+08:00","[Msg]":"ll's element:{key1,v123456} "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:101","[tag]":"lru ll info","[TS]":"2023-08-29T10:49:37+08:00","[Msg]":"c.nbytes:49 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"lru ll info","[TS]":"2023-08-29T10:49:37+08:00","[Msg]":"ll's element:{k3,v3} "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:101","[tag]":"lru ll info","[TS]":"2023-08-29T10:49:37+08:00","[Msg]":"c.nbytes:53 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"lru ll info","[TS]":"2023-08-29T10:49:37+08:00","[Msg]":"ll's element:{k2,v2} "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:63","[tag]":"TestOnEvicted","[TS]":"2023-08-29T10:49:41+08:00","[Msg]":"cap:11 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:101","[tag]":"lru ll info","[TS]":"2023-08-29T10:49:41+08:00","[Msg]":"c.nbytes:11,ccc:11 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"lru ll info","[TS]":"2023-08-29T10:49:41+08:00","[Msg]":"ll's element:{key1,v123456} "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:68","[tag]":"TestOnEvicted","[TS]":"2023-08-29T10:49:41+08:00","[Msg]":"cap1:4 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:101","[tag]":"lru ll info","[TS]":"2023-08-29T10:49:41+08:00","[Msg]":"c.nbytes:15,ccc:4 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"lru ll info","[TS]":"2023-08-29T10:49:41+08:00","[Msg]":"ll's element:{k2,v2} "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:101","[tag]":"lru ll info","[TS]":"2023-08-29T10:49:41+08:00","[Msg]":"c.nbytes:15,ccc:11 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"lru ll info","[TS]":"2023-08-29T10:49:41+08:00","[Msg]":"ll's element:{key1,v123456} "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:101","[tag]":"lru ll info","[TS]":"2023-08-29T10:51:36+08:00","[Msg]":"c.nbytes:19,ccc:4 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"lru ll info","[TS]":"2023-08-29T10:51:36+08:00","[Msg]":"ll's element:{k3,v3} "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:99","[tag]":"lru ll info","[TS]":"2023-08-29T10:51:37+08:00","[Msg]":"c.nbytes:11,ccc:11 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:100","[tag]":"lru ll info","[TS]":"2023-08-29T10:51:37+08:00","[Msg]":"ll's element:{key1,v123456} "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:66","[tag]":"TestOnEvicted","[TS]":"2023-08-29T10:51:37+08:00","[Msg]":"cap1:4 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:99","[tag]":"lru ll info","[TS]":"2023-08-29T10:51:37+08:00","[Msg]":"c.nbytes:15,ccc:4 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:100","[tag]":"lru ll info","[TS]":"2023-08-29T10:51:37+08:00","[Msg]":"ll's element:{k2,v2} "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:99","[tag]":"lru ll info","[TS]":"2023-08-29T10:51:37+08:00","[Msg]":"c.nbytes:15,ccc:11 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:100","[tag]":"lru ll info","[TS]":"2023-08-29T10:51:37+08:00","[Msg]":"ll's element:{key1,v123456} "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:99","[tag]":"lru ll info","[TS]":"2023-08-29T10:53:01+08:00","[Msg]":"c.nbytes:19,ccc:4 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:100","[tag]":"lru ll info","[TS]":"2023-08-29T10:53:01+08:00","[Msg]":"ll's element:{k3,v3} "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:99","[tag]":"lru ll info","[TS]":"2023-08-29T10:53:01+08:00","[Msg]":"c.nbytes:19,ccc:4 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:100","[tag]":"lru ll info","[TS]":"2023-08-29T10:53:01+08:00","[Msg]":"ll's element:{k2,v2} "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:99","[tag]":"lru ll info","[TS]":"2023-08-29T10:53:01+08:00","[Msg]":"c.nbytes:19,ccc:11 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:100","[tag]":"lru ll info","[TS]":"2023-08-29T10:53:01+08:00","[Msg]":"ll's element:{key1,v123456} "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:100","[tag]":"lru ll info","[TS]":"2023-08-29T10:54:55+08:00","[Msg]":"c.nbytes:11,ccc:11 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:67","[tag]":"TestOnEvicted","[TS]":"2023-08-29T10:54:55+08:00","[Msg]":"cap1:4 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:100","[tag]":"lru ll info","[TS]":"2023-08-29T10:54:55+08:00","[Msg]":"c.nbytes:15,ccc:4 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:100","[tag]":"lru ll info","[TS]":"2023-08-29T10:54:55+08:00","[Msg]":"c.nbytes:15,ccc:11 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:100","[tag]":"lru ll info","[TS]":"2023-08-29T10:55:00+08:00","[Msg]":"c.nbytes:19,ccc:4 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:100","[tag]":"lru ll info","[TS]":"2023-08-29T10:55:00+08:00","[Msg]":"c.nbytes:19,ccc:4 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:100","[tag]":"lru ll info","[TS]":"2023-08-29T10:55:00+08:00","[Msg]":"c.nbytes:19,ccc:11 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:67","[tag]":"TestOnEvicted","[TS]":"2023-08-29T10:56:34+08:00","[Msg]":"cap1:4 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:67","[tag]":"TestOnEvicted","[TS]":"2023-08-29T10:57:03+08:00","[Msg]":"cap1:4 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:67","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:02:03+08:00","[Msg]":"cap1:4 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:67","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:02:27+08:00","[Msg]":"cap1:4 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:67","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:07:15+08:00","[Msg]":"cap1:4 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:67","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:07:40+08:00","[Msg]":"cap1:4 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:67","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:08:58+08:00","[Msg]":"cap1:4 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:67","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:11:41+08:00","[Msg]":"cap1:4 "}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:15:41+08:00","[Msg]":"nbytes:11 ,maxBytes100"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:15:43+08:00","[Msg]":"nbytes:15 ,maxBytes100"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:15:46+08:00","[Msg]":"nbytes:19 ,maxBytes100"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:17:19+08:00","[Msg]":"nbytes:11 ,maxBytes100"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:17:23+08:00","[Msg]":"nbytes:15 ,maxBytes100"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:17:28+08:00","[Msg]":"nbytes:19 ,maxBytes100"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:19:22+08:00","[Msg]":"nbytes:11 ,maxBytes100"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:19:38+08:00","[Msg]":"nbytes:15 ,maxBytes100"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:20:31+08:00","[Msg]":"nbytes:19 ,maxBytes100"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:20:36+08:00","[Msg]":"nbytes:11 ,maxBytes100"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:20:37+08:00","[Msg]":"nbytes:15 ,maxBytes100"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:20:39+08:00","[Msg]":"nbytes:19 ,maxBytes100"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:22:27+08:00","[Msg]":"nbytes:11 ,maxBytes100"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:22:27+08:00","[Msg]":"nbytes:15 ,maxBytes100"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:22:27+08:00","[Msg]":"nbytes:19 ,maxBytes100"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:22:42+08:00","[Msg]":"nbytes:11 ,maxBytes100"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:22:42+08:00","[Msg]":"nbytes:15 ,maxBytes100"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:22:42+08:00","[Msg]":"nbytes:19 ,maxBytes100"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:23:15+08:00","[Msg]":"nbytes:11 ,maxBytes18"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:23:15+08:00","[Msg]":"nbytes:15 ,maxBytes18"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:23:15+08:00","[Msg]":"nbytes:8 ,maxBytes18"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:26:13+08:00","[Msg]":"nbytes:11 ,maxBytes20"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:26:13+08:00","[Msg]":"nbytes:15 ,maxBytes20"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:26:13+08:00","[Msg]":"nbytes:17 ,maxBytes20"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:26:45+08:00","[Msg]":"nbytes:11 ,maxBytes20"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:26:47+08:00","[Msg]":"nbytes:15 ,maxBytes20"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:26:47+08:00","[Msg]":"nbytes:17 ,maxBytes20"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:27:23+08:00","[Msg]":"nbytes:11 ,maxBytes20"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:27:32+08:00","[Msg]":"nbytes:15 ,maxBytes20"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:27:40+08:00","[Msg]":"nbytes:17 ,maxBytes20"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:28:06+08:00","[Msg]":"nbytes:11 ,maxBytes201"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:28:06+08:00","[Msg]":"nbytes:15 ,maxBytes201"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:102","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:28:06+08:00","[Msg]":"nbytes:17 ,maxBytes201"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:103","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:28:44+08:00","[Msg]":"nbytes:11 ,maxBytes201"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:103","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:28:44+08:00","[Msg]":"nbytes:15 ,maxBytes201"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:103","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:28:44+08:00","[Msg]":"nbytes:17 ,maxBytes201"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:103","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:28:44+08:00","[Msg]":"nbytes:21 ,maxBytes201"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:103","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:29:30+08:00","[Msg]":"nbytes:11 ,maxBytes201"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:103","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:29:30+08:00","[Msg]":"nbytes:15 ,maxBytes201"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:103","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:33:36+08:00","[Msg]":"nbytes:17 ,maxBytes201"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:103","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:33:36+08:00","[Msg]":"nbytes:21 ,maxBytes201"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:103","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:34:23+08:00","[Msg]":"nbytes:4 ,maxBytes201"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:103","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:34:23+08:00","[Msg]":"nbytes:8 ,maxBytes201"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:103","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:34:23+08:00","[Msg]":"nbytes:12 ,maxBytes201"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:103","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:34:23+08:00","[Msg]":"nbytes:16 ,maxBytes201"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:97","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:50:42+08:00","[Msg]":"nbytes:4 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:97","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:50:42+08:00","[Msg]":"nbytes:8 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:97","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:50:42+08:00","[Msg]":"nbytes:8 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:97","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:50:42+08:00","[Msg]":"nbytes:8 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:97","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:50:48+08:00","[Msg]":"nbytes:4 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:97","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:50:49+08:00","[Msg]":"nbytes:8 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:97","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:51:09+08:00","[Msg]":"nbytes:8 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:97","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:51:22+08:00","[Msg]":"nbytes:8 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:97","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:51:23+08:00","[Msg]":"nbytes:4 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:97","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:51:23+08:00","[Msg]":"nbytes:8 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:97","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:51:35+08:00","[Msg]":"nbytes:8 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:97","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:51:35+08:00","[Msg]":"nbytes:8 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:97","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:51:42+08:00","[Msg]":"nbytes:4 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:97","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:51:48+08:00","[Msg]":"nbytes:8 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:97","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:53:47+08:00","[Msg]":"nbytes:8 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:97","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:53:47+08:00","[Msg]":"nbytes:8 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:97","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:53:52+08:00","[Msg]":"nbytes:4 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:97","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:53:52+08:00","[Msg]":"nbytes:8 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:97","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:54:10+08:00","[Msg]":"nbytes:8 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:97","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:54:12+08:00","[Msg]":"nbytes:4 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:97","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:54:12+08:00","[Msg]":"nbytes:8 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:97","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:54:22+08:00","[Msg]":"nbytes:0 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:97","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:55:08+08:00","[Msg]":"nbytes:0 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:97","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:57:09+08:00","[Msg]":"nbytes:4 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:97","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:57:09+08:00","[Msg]":"nbytes:8 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru.go:90","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:57:09+08:00","[Msg]":"nbytes:33 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru.go:90","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:59:03+08:00","[Msg]":"nbytes:29 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru.go:90","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:59:30+08:00","[Msg]":"nbytes:25 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:97","[tag]":"TestOnEvicted","[TS]":"2023-08-29T11:59:37+08:00","[Msg]":"nbytes:0 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru.go:90","[tag]":"TestOnEvicted","[TS]":"2023-08-29T12:00:06+08:00","[Msg]":"nbytes:25 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:97","[tag]":"TestOnEvicted","[TS]":"2023-08-29T12:00:09+08:00","[Msg]":"nbytes:0 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:110","[tag]":"TestOnEvicted","[TS]":"2023-08-29T12:01:21+08:00","[Msg]":"nbytes:4 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:110","[tag]":"TestOnEvicted","[TS]":"2023-08-29T12:01:21+08:00","[Msg]":"nbytes:8 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru.go:90","[tag]":"TestOnEvicted","[TS]":"2023-08-29T12:01:21+08:00","[Msg]":"nbytes:33 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru.go:90","[tag]":"TestOnEvicted","[TS]":"2023-08-29T12:01:21+08:00","[Msg]":"nbytes:29 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru.go:90","[tag]":"TestOnEvicted","[TS]":"2023-08-29T12:01:21+08:00","[Msg]":"nbytes:25 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:110","[tag]":"TestOnEvicted","[TS]":"2023-08-29T12:01:21+08:00","[Msg]":"nbytes:0 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru.go:90","[tag]":"TestOnEvicted","[TS]":"2023-08-29T12:01:21+08:00","[Msg]":"nbytes:25 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:110","[tag]":"TestOnEvicted","[TS]":"2023-08-29T12:01:21+08:00","[Msg]":"nbytes:0 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:110","[tag]":"TestOnEvicted","[TS]":"2023-08-29T12:01:59+08:00","[Msg]":"nbytes:4 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:110","[tag]":"TestOnEvicted","[TS]":"2023-08-29T12:01:59+08:00","[Msg]":"nbytes:8 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:110","[tag]":"TestOnEvicted","[TS]":"2023-08-29T12:01:59+08:00","[Msg]":"nbytes:0 ,maxBytes10"}
+{"[Level]":"info","[Caller]":"/Users/hq/GeeVong/SimpleGo/db/gee-cache/day1-lru/geecache/lru/lru_test.go:110","[tag]":"TestOnEvicted","[TS]":"2023-08-29T12:01:59+08:00","[Msg]":"nbytes:0 ,maxBytes10"}
