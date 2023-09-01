@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47fd955d-cfd1-41ac-85fa-84f9d7c84376" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/checksomething/checkbuild/main/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/cache/lru/lru.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/mysql/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/mysql/orm/mysqlcfg.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/mysql/orm/mysqlorm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/mysql/orm/session.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/logcfg.go" beforeDir="false" afterPath="$PROJECT_DIR$/log/logcfg.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/main/main.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/log/zerolog" beforeDir="false" afterPath="$PROJECT_DIR$/log/zerolog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/zerolog/console.go" beforeDir="false" afterPath="$PROJECT_DIR$/log/zerolog/console.go" afterDir="false" />
     </list>
@@ -50,105 +59,97 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed": "true",
-    "ToolWindowRun.ShowToolbar": "false",
-    "WebServerToolWindowFactoryState": "false",
-    "configurable..is.expanded": "false",
-    "configurable.GoLibrariesConfigurable.is.expanded": "true",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "/Users/hq",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "go.vgo"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
+    &quot;ToolWindowRun.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;configurable..is.expanded&quot;: &quot;false&quot;,
+    &quot;configurable.GoLibrariesConfigurable.is.expanded&quot;: &quot;true&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/hq/GeeVong/SimpleGo/log/main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;go.vgo&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/log/main" />
+      <recent name="$PROJECT_DIR$/db/mysql" />
+      <recent name="$PROJECT_DIR$/db" />
+      <recent name="$PROJECT_DIR$/web" />
       <recent name="$PROJECT_DIR$/src/checksomething/mysql" />
-      <recent name="$PROJECT_DIR$/src/select" />
-      <recent name="$PROJECT_DIR$/src/csp" />
-      <recent name="$PROJECT_DIR$/src/basicsyntax/common" />
-      <recent name="$PROJECT_DIR$/src/base/rabbitMQ/simque/simqueRcv" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/checksomething/checkbuild" />
       <recent name="$PROJECT_DIR$/log" />
       <recent name="$PROJECT_DIR$/basicsyntax" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/basicsyntax/common" />
-      <recent name="$PROJECT_DIR$/src/basicsyntax" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestGet in geecache/lru">
-    <configuration name="go build github.com/GeeVong/SimpleGo/log/main" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Build.go build checkBuild/main">
+    <configuration name="go build checkBuild/main" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="SimpleGo" />
-      <working_directory value="$PROJECT_DIR$/log" />
+      <working_directory value="$PROJECT_DIR$/checksomething/checkbuild" />
       <kind value="PACKAGE" />
-      <package value="github.com/GeeVong/SimpleGo/log/main" />
+      <package value="checkBuild/main" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/log/main/main.go" />
+      <filePath value="$PROJECT_DIR$/checksomething/checkbuild/main/main.go" />
       <method v="2" />
     </configuration>
-    <configuration name="TestChannel in github.com/GeeVong/SimpleGo/simplesyntax" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="go build geeorm/cmd_test" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="SimpleGo" />
-      <working_directory value="$PROJECT_DIR$/simplesyntax" />
-      <root_directory value="$PROJECT_DIR$" />
+      <working_directory value="$PROJECT_DIR$/db/gee-orm/day1-database-sql" />
       <kind value="PACKAGE" />
-      <package value="github.com/GeeVong/SimpleGo/simplesyntax" />
+      <package value="geeorm/cmd_test" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/db/gee-orm/day1-database-sql/cmd_test/main.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build github.com/GeeVong/SimpleGo/checksomething/mysql" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="SimpleGo" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/GeeVong/SimpleGo/checksomething/mysql" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/checksomething/mysql/optIndex.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build mysql" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="SimpleGo" />
+      <working_directory value="$PROJECT_DIR$/db/mysql" />
+      <kind value="PACKAGE" />
+      <package value="mysql" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/db/mysql/optIndex.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestLog in geeorm/log" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="SimpleGo" />
+      <working_directory value="$PROJECT_DIR$/db/gee-orm/day1-database-sql/log" />
+      <root_directory value="$PROJECT_DIR$/db/gee-orm/day1-database-sql" />
+      <kind value="PACKAGE" />
+      <package value="geeorm/log" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestChannel\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestGet in geecache/lru" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="SimpleGo" />
-      <working_directory value="$PROJECT_DIR$/db/gee-cache/day1-lru/geecache/lru" />
-      <root_directory value="$PROJECT_DIR$/db/gee-cache/day1-lru/geecache" />
-      <kind value="PACKAGE" />
-      <package value="geecache/lru" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestGet\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestLogColor in github.com/GeeVong/SimpleGo/log" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="SimpleGo" />
-      <working_directory value="$PROJECT_DIR$/log" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="github.com/GeeVong/SimpleGo/log" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestLogColor\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestZeroLogColor in github.com/GeeVong/SimpleGo/log" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="SimpleGo" />
-      <working_directory value="$PROJECT_DIR$/log" />
-      <kind value="PACKAGE" />
-      <package value="github.com/GeeVong/SimpleGo/log" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestZeroLogColor\E$" />
+      <pattern value="^\QTestLog\E$" />
       <method v="2" />
     </configuration>
     <configuration name="TestZeroLogConsoleWriter in github.com/GeeVong/SimpleGo/log" type="GoTestRunConfiguration" factoryName="Go Test" nameIsGenerated="true">
@@ -163,20 +164,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Build.go build github.com/GeeVong/SimpleGo/log/main" />
+      <item itemvalue="Go Build.go build checkBuild/main" />
+      <item itemvalue="Go Build.go build geeorm/cmd_test" />
+      <item itemvalue="Go Build.go build github.com/GeeVong/SimpleGo/checksomething/mysql" />
+      <item itemvalue="Go Build.go build mysql" />
       <item itemvalue="Go Test.TestZeroLogConsoleWriter in github.com/GeeVong/SimpleGo/log" />
-      <item itemvalue="Go Test.TestGet in geecache/lru" />
-      <item itemvalue="Go Test.TestZeroLogColor in github.com/GeeVong/SimpleGo/log" />
-      <item itemvalue="Go Test.TestLogColor in github.com/GeeVong/SimpleGo/log" />
-      <item itemvalue="Go Test.TestChannel in github.com/GeeVong/SimpleGo/simplesyntax" />
+      <item itemvalue="Go Test.TestLog in geeorm/log" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestGet in geecache/lru" />
-        <item itemvalue="Go Test.TestChannel in github.com/GeeVong/SimpleGo/simplesyntax" />
-        <item itemvalue="Go Build.go build github.com/GeeVong/SimpleGo/log/main" />
-        <item itemvalue="Go Test.TestZeroLogColor in github.com/GeeVong/SimpleGo/log" />
-        <item itemvalue="Go Test.TestLogColor in github.com/GeeVong/SimpleGo/log" />
+        <item itemvalue="Go Build.go build checkBuild/main" />
+        <item itemvalue="Go Build.go build mysql" />
+        <item itemvalue="Go Build.go build github.com/GeeVong/SimpleGo/checksomething/mysql" />
+        <item itemvalue="Go Build.go build geeorm/cmd_test" />
+        <item itemvalue="Go Test.TestLog in geeorm/log" />
       </list>
     </recent_temporary>
   </component>
@@ -327,14 +328,84 @@
           <option name="timeStamp" value="95" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$USER_HOME$/libs/go1.20.6/src/bytes/buffer.go</url>
-          <line>249</line>
-          <option name="timeStamp" value="99" />
+          <url>file://$PROJECT_DIR$/db/gee-cache/day1-lru/geecache/lru/lru.go</url>
+          <line>95</line>
+          <option name="timeStamp" value="126" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/db/gee-cache/day1-lru/geecache/lru/lru_test.go</url>
-          <line>15</line>
-          <option name="timeStamp" value="100" />
+          <line>81</line>
+          <option name="timeStamp" value="129" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/db/gee-cache/day3-http-server/geecache/http.go</url>
+          <line>38</line>
+          <option name="timeStamp" value="148" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/db/gee-cache/day4-consistent-hash/geecache/consistenthash/consistenthash_test.go</url>
+          <line>16</line>
+          <option name="timeStamp" value="150" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/db/gee-cache/day4-consistent-hash/geecache/consistenthash/consistenthash_test.go</url>
+          <line>23</line>
+          <option name="timeStamp" value="151" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/db/gee-cache/day4-consistent-hash/geecache/consistenthash/consistenthash_test.go</url>
+          <line>40</line>
+          <option name="timeStamp" value="153" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/db/gee-cache/day2-single-node/geecache/geecache.go</url>
+          <line>64</line>
+          <option name="timeStamp" value="154" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/simplesyntax/simple_test.go</url>
+          <line>28</line>
+          <option name="timeStamp" value="159" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/web/gee-web/day1-http-base/base3/main.go</url>
+          <line>17</line>
+          <option name="timeStamp" value="163" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/web/gee-web/day1-http-base/base3/gee/gee.go</url>
+          <line>46</line>
+          <option name="timeStamp" value="164" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/web/gee-web/day2-context/gee/context.go</url>
+          <line>54</line>
+          <option name="timeStamp" value="165" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/web/gee-web/day2-context/main.go</url>
+          <line>41</line>
+          <option name="timeStamp" value="167" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/checksomething/mysql/optIndex.go</url>
+          <line>82</line>
+          <option name="timeStamp" value="171" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/checksomething/mysql/optIndex.go</url>
+          <line>78</line>
+          <option name="timeStamp" value="172" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/checksomething/mysql/optIndex.go</url>
+          <line>72</line>
+          <option name="timeStamp" value="175" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/db/mysql/orm/session.go</url>
+          <line>37</line>
+          <option name="timeStamp" value="176" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -345,12 +416,10 @@
         <watch expression="&amp;data_stack_int" language="go" />
         <watch expression="&amp;data_global_i" language="go" />
       </configuration>
-      <configuration name="GoTestRunConfiguration">
-        <watch expression="&amp;p" language="go" />
-      </configuration>
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SimpleGo$TestSlice_in_basicsyntax_overview.out" NAME="TestSlice in basicsyntax/overview Coverage Results" MODIFIED="1692100985774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SimpleGo$TestGet_in_geecache_lru.out" NAME="TestGet in geecache/lru Coverage Results" MODIFIED="1693275346646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

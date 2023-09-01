@@ -29,7 +29,6 @@ func SetLogLevel(logLevel int) {
 // 初始化 zerolog
 func InitZeroLogCfg() {
 	once.Do(func() {
-		LogFlag = LogConsole
 		switch LogFlag {
 		case LogConsole:
 			Logger = zeroLogConsole()
