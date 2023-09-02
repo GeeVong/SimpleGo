@@ -5,6 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47fd955d-cfd1-41ac-85fa-84f9d7c84376" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/testgoctl/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testgoctl/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testgoctl/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testgoctl/temp.api" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testgoctl/ts/01_helloTS.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testgoctl/ts/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testgoctl/ts/test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +75,8 @@
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;go.vgo&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/hq/Library/Application Support/JetBrains/Toolbox/apps/Goland/ch-0/231.9225.16/GoLand.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
@@ -92,7 +100,7 @@
       <recent name="$PROJECT_DIR$/src/basicsyntax/common" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build checkBuild/main">
+  <component name="RunManager" selected="Go Build.go build testgoctl">
     <configuration name="go build checkBuild/main" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="SimpleGo" />
       <working_directory value="$PROJECT_DIR$/checksomething/checkbuild" />
@@ -129,16 +137,13 @@
       <filePath value="$PROJECT_DIR$/db/mysql/optIndex.go" />
       <method v="2" />
     </configuration>
-    <configuration name="TestLog in geeorm/log" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="go build testgoctl" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="SimpleGo" />
-      <working_directory value="$PROJECT_DIR$/db/gee-orm/day1-database-sql/log" />
-      <root_directory value="$PROJECT_DIR$/db/gee-orm/day1-database-sql" />
+      <working_directory value="$PROJECT_DIR$/testgoctl" />
       <kind value="PACKAGE" />
-      <package value="geeorm/log" />
+      <package value="testgoctl" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestLog\E$" />
+      <filePath value="$PROJECT_DIR$/testgoctl/showgoctl.go" />
       <method v="2" />
     </configuration>
     <configuration name="TestZeroLogConsoleWriter in github.com/GeeVong/SimpleGo/log" type="GoTestRunConfiguration" factoryName="Go Test" nameIsGenerated="true">
@@ -153,33 +158,67 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Go Build.go build testgoctl" />
       <item itemvalue="Go Build.go build checkBuild/main" />
       <item itemvalue="Go Build.go build geeorm/cmd_test" />
       <item itemvalue="Go Build.go build github.com/GeeVong/SimpleGo/checksomething/mysql" />
       <item itemvalue="Go Build.go build mysql" />
       <item itemvalue="Go Test.TestZeroLogConsoleWriter in github.com/GeeVong/SimpleGo/log" />
-      <item itemvalue="Go Test.TestLog in geeorm/log" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build testgoctl" />
         <item itemvalue="Go Build.go build checkBuild/main" />
         <item itemvalue="Go Build.go build mysql" />
         <item itemvalue="Go Build.go build github.com/GeeVong/SimpleGo/checksomething/mysql" />
         <item itemvalue="Go Build.go build geeorm/cmd_test" />
-        <item itemvalue="Go Test.TestLog in geeorm/log" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/testgoctl/ts/gocliRequest.js" />
+        <option value="$PROJECT_DIR$/testgoctl/ts/showgoctlComponents.js" />
+        <option value="$PROJECT_DIR$/testgoctl/ts/showgoctl.js" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="user">
+                    <value>
+                      <list>
+                        <option value="*" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -384,6 +423,11 @@
           <url>file://$PROJECT_DIR$/db/mysql/orm/session.go</url>
           <line>37</line>
           <option name="timeStamp" value="176" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/testgoctl/showgoctl.go</url>
+          <line>22</line>
+          <option name="timeStamp" value="177" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
