@@ -29,6 +29,8 @@ import (
 	发送的数据如果没有被接收方接收，那么发送方阻塞；
 
 	如果一直接收不到发送方的数据，接收方阻塞；
+
+	从一个unbuffered channel的receive一定happen before 往这个channel send完成(之前)
 */
 func NoBufferChan() {
 	ch := make(chan int64) // 创建一个无缓冲通道

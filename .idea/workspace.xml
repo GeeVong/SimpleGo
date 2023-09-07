@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47fd955d-cfd1-41ac-85fa-84f9d7c84376" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/testgoctl/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgoctl/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgoctl/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgoctl/temp.api" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgoctl/ts/01_helloTS.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgoctl/ts/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testgoctl/ts/test.ts" afterDir="false" />
+    <list default="true" id="47fd955d-cfd1-41ac-85fa-84f9d7c84376" name="Changes" comment="1.mysql orm 简易项目&#10;2.LRU&#10;3.zero 使用&#10;4.build 静态文件">
+      <change afterPath="$PROJECT_DIR$/others/tt_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7ebd99f7-a2a1-401a-9e04-7d7b1b3e26bb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7ebd99f7-a2a1-401a-9e04-7d7b1b3e26bb.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/channel.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/channel.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simplesyntax/simple_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/simplesyntax/simple_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/gee-web/day2-context/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/web/gee-web/day2-context/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/gee-web/day3-router/gee/trie.go" beforeDir="false" afterPath="$PROJECT_DIR$/web/gee-web/day3-router/gee/trie.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +41,9 @@
     <setting file="file://$USER_HOME$/libs/go1.20.6/src/reflect/type.go" root0="SKIP_INSPECTION" />
     <setting file="file://$USER_HOME$/libs/go1.20.6/src/runtime/panic.go" root0="SKIP_INSPECTION" />
     <setting file="file://$USER_HOME$/libs/go1.20.6/src/runtime/pprof/pprof.go" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="lvblkcr4" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -75,7 +77,7 @@
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;go.sdk&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/hq/Library/Application Support/JetBrains/Toolbox/apps/Goland/ch-0/231.9225.16/GoLand.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -100,78 +102,19 @@
       <recent name="$PROJECT_DIR$/src/basicsyntax/common" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build testgoctl">
-    <configuration name="go build checkBuild/main" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="go build example" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="SimpleGo" />
-      <working_directory value="$PROJECT_DIR$/checksomething/checkbuild" />
+      <working_directory value="$PROJECT_DIR$/web/gee-web/day2-context" />
       <kind value="PACKAGE" />
-      <package value="checkBuild/main" />
+      <package value="example" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/checksomething/checkbuild/main/main.go" />
+      <filePath value="$PROJECT_DIR$/web/gee-web/day2-context/main.go" />
       <method v="2" />
     </configuration>
-    <configuration name="go build geeorm/cmd_test" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="SimpleGo" />
-      <working_directory value="$PROJECT_DIR$/db/gee-orm/day1-database-sql" />
-      <kind value="PACKAGE" />
-      <package value="geeorm/cmd_test" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/db/gee-orm/day1-database-sql/cmd_test/main.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build github.com/GeeVong/SimpleGo/checksomething/mysql" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="SimpleGo" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="github.com/GeeVong/SimpleGo/checksomething/mysql" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/checksomething/mysql/optIndex.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build mysql" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="SimpleGo" />
-      <working_directory value="$PROJECT_DIR$/db/mysql" />
-      <kind value="PACKAGE" />
-      <package value="mysql" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/db/mysql/optIndex.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build testgoctl" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="SimpleGo" />
-      <working_directory value="$PROJECT_DIR$/testgoctl" />
-      <kind value="PACKAGE" />
-      <package value="testgoctl" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/testgoctl/showgoctl.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestZeroLogConsoleWriter in github.com/GeeVong/SimpleGo/log" type="GoTestRunConfiguration" factoryName="Go Test" nameIsGenerated="true">
-      <module name="SimpleGo" />
-      <working_directory value="$PROJECT_DIR$/log" />
-      <kind value="PACKAGE" />
-      <package value="github.com/GeeVong/SimpleGo/log" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestZeroLogConsoleWriter\E$" />
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="Go Build.go build testgoctl" />
-      <item itemvalue="Go Build.go build checkBuild/main" />
-      <item itemvalue="Go Build.go build geeorm/cmd_test" />
-      <item itemvalue="Go Build.go build github.com/GeeVong/SimpleGo/checksomething/mysql" />
-      <item itemvalue="Go Build.go build mysql" />
-      <item itemvalue="Go Test.TestZeroLogConsoleWriter in github.com/GeeVong/SimpleGo/log" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build testgoctl" />
-        <item itemvalue="Go Build.go build checkBuild/main" />
-        <item itemvalue="Go Build.go build mysql" />
-        <item itemvalue="Go Build.go build github.com/GeeVong/SimpleGo/checksomething/mysql" />
-        <item itemvalue="Go Build.go build geeorm/cmd_test" />
+        <item itemvalue="Go Build.go build example" />
       </list>
     </recent_temporary>
   </component>
@@ -235,199 +178,39 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/simplesyntax/htmlserver/htmlserver.go</url>
-          <line>15</line>
-          <option name="timeStamp" value="4" />
+          <url>file://$PROJECT_DIR$/../gosrcrd-1.20.6/src/runtime/chan.go</url>
+          <line>652</line>
+          <option name="timeStamp" value="187" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/simplesyntax/locks/syncMutex/syncMutex.go</url>
-          <line>18</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/simplesyntax/xxl/xxl.go</url>
-          <line>44</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/simplesyntax/xxl/xxl.go</url>
-          <line>79</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/simplesyntax/xxl/xxl.go</url>
-          <line>18</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/checksomething/hashtable/hashtable.go</url>
-          <line>98</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/checksomething/hashtable/hashtable.go</url>
-          <line>44</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/simplesyntax/reflect/reflect.go</url>
-          <line>21</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/simplesyntax/pprof/tpprof.go</url>
-          <line>25</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/simplesyntax/pprof/tpprof.go</url>
-          <line>56</line>
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/simplesyntax/pprof/tpprof.go</url>
-          <line>23</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/simplesyntax/binary/binary_bitwise_operation.go</url>
-          <line>105</line>
-          <option name="timeStamp" value="52" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/simplesyntax/t-slice/tslice.go</url>
-          <line>73</line>
-          <option name="timeStamp" value="57" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/simplesyntax/t-slice/tslice.go</url>
-          <line>42</line>
-          <option name="timeStamp" value="58" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/checksomething/varInMem/vars.go</url>
-          <line>52</line>
-          <option name="timeStamp" value="60" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$USER_HOME$/gopath/src/github.com/golang/protobuf/proto/lib.go</url>
-          <line>337</line>
-          <option name="timeStamp" value="66" />
+          <url>file://$PROJECT_DIR$/../gosrcrd-1.20.6/src/runtime/chan.go</url>
+          <line>322</line>
+          <option name="timeStamp" value="188" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/simplesyntax/simple_test.go</url>
-          <line>525</line>
-          <option name="timeStamp" value="67" />
+          <line>1228</line>
+          <option name="timeStamp" value="191" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/simplesyntax/simple_test.go</url>
-          <line>917</line>
-          <option name="timeStamp" value="74" />
+          <url>file://$PROJECT_DIR$/../gosrcrd-1.20.6/src/runtime/chan.go</url>
+          <line>180</line>
+          <option name="timeStamp" value="192" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$USER_HOME$/libs/go1.20.6/src/runtime/chan.go</url>
-          <line>64</line>
-          <option name="timeStamp" value="77" />
+          <url>file://$PROJECT_DIR$/../gosrcrd-1.20.6/src/runtime/chan.go</url>
+          <line>234</line>
+          <option name="timeStamp" value="193" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/log/zerolog/console_test.go</url>
-          <line>227</line>
-          <option name="timeStamp" value="82" />
+          <url>file://$PROJECT_DIR$/../gosrcrd-1.20.6/src/runtime/chan.go</url>
+          <line>164</line>
+          <option name="timeStamp" value="194" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/log/zerolog/diode/diode_test.go</url>
-          <line>22</line>
-          <option name="timeStamp" value="88" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/log/zerolog/console.go</url>
-          <line>320</line>
-          <option name="timeStamp" value="92" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/log/zerolog/console.go</url>
-          <line>385</line>
-          <option name="timeStamp" value="93" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/log/zerolog/console.go</url>
-          <line>265</line>
-          <option name="timeStamp" value="94" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/log/zerolog/console.go</url>
-          <line>129</line>
-          <option name="timeStamp" value="95" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/db/gee-cache/day1-lru/geecache/lru/lru.go</url>
-          <line>95</line>
-          <option name="timeStamp" value="126" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/db/gee-cache/day1-lru/geecache/lru/lru_test.go</url>
-          <line>81</line>
-          <option name="timeStamp" value="129" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/db/gee-cache/day3-http-server/geecache/http.go</url>
-          <line>38</line>
-          <option name="timeStamp" value="148" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/db/gee-cache/day4-consistent-hash/geecache/consistenthash/consistenthash_test.go</url>
-          <line>16</line>
-          <option name="timeStamp" value="150" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/db/gee-cache/day4-consistent-hash/geecache/consistenthash/consistenthash_test.go</url>
-          <line>23</line>
-          <option name="timeStamp" value="151" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/db/gee-cache/day4-consistent-hash/geecache/consistenthash/consistenthash_test.go</url>
-          <line>40</line>
-          <option name="timeStamp" value="153" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/db/gee-cache/day2-single-node/geecache/geecache.go</url>
-          <line>64</line>
-          <option name="timeStamp" value="154" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/simplesyntax/simple_test.go</url>
-          <line>28</line>
-          <option name="timeStamp" value="159" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/web/gee-web/day1-http-base/base3/main.go</url>
-          <line>17</line>
-          <option name="timeStamp" value="163" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/web/gee-web/day1-http-base/base3/gee/gee.go</url>
-          <line>46</line>
-          <option name="timeStamp" value="164" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/web/gee-web/day2-context/gee/context.go</url>
-          <line>54</line>
-          <option name="timeStamp" value="165" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/web/gee-web/day2-context/main.go</url>
+          <url>file://$PROJECT_DIR$/web/gee-web/day2-context/gee/gee.go</url>
           <line>41</line>
-          <option name="timeStamp" value="167" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/db/mysql/orm/session.go</url>
-          <line>37</line>
-          <option name="timeStamp" value="176" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/testgoctl/showgoctl.go</url>
-          <line>22</line>
-          <option name="timeStamp" value="177" />
+          <option name="timeStamp" value="195" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -441,6 +224,7 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/SimpleGo$TestChannel_in_github_com_GeeVong_SimpleGo_simplesyntax.out" NAME="TestChannel in github.com/GeeVong/SimpleGo/simplesyntax Coverage Results" MODIFIED="1693875205299" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/SimpleGo$TestSlice_in_basicsyntax_overview.out" NAME="TestSlice in basicsyntax/overview Coverage Results" MODIFIED="1692100985774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/SimpleGo$TestGet_in_geecache_lru.out" NAME="TestGet in geecache/lru Coverage Results" MODIFIED="1693275346646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
